@@ -1,0 +1,56 @@
+!!!
+%html{html_attrs}
+  %head
+    %meta{:'http-equiv' => "Content-Type", :content => "text/html; charset=utf-8"}
+    %meta{:name => "lang", :content => "en"}
+    %title youRoomAssistantについて
+    %link{:href=>'/stylesheets/application.css', :media => "screen", :rel => 'stylesheet', :type => "text/css"}
+    %script{:type => "text/javascript", :src => "http://code.jquery.com/jquery-1.5.min.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/modernizr.custom.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/smoothscroll.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/waypoints.min.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/application.js"}
+    :javascript
+      $(document).ready(function() {
+      	$('.top').addClass('hidden');
+      	$.waypoints.settings.scrollThrottle = 30;
+      	$('#wrapper').waypoint(function(event, direction) {//here you are setting the main div #wrapper in this case
+      		$('.top').toggleClass('hidden', direction === "up");
+      	}, {
+      		offset: '-100%'
+      	}).find('#main-nav-holder').waypoint(function(event, direction) {//here you are setting the sticky DIV
+      		$(this).parent().toggleClass('sticky', direction === "down");
+      		event.stopPropagation();
+      	});
+      	
+      	$('#wrapper').waypoint(function(event, direction) {//here you are setting the main div #wrapper in this case
+      		$('.top').toggleClass('hidden', direction === "up");
+      	}, {
+      		offset: '-100%'
+      	}).find('#sidebar').waypoint(function(event, direction) {//here you are setting the sticky DIV
+      		$(this).parent().toggleClass('sticky', direction === "down");
+      		event.stopPropagation();
+      	});
+      });
+    = partial :_webfonts
+    
+  %body
+    #wrapper
+      = yield
+      = partial :_analytics
+      %footer#footer
+        %p#page-top
+          %span.page-top
+            %a{:href => "#header"}
+              %i.icon-arrow-up
+              %span
+                ページ上部へ
+          %span.to_youroom
+            %a{:href => "https://www.youroom.in/"}
+              %i
+                %img{:src => "/images/youroom.png"}
+              %span
+                youRoomに戻る
+        %nav
+          %ul
+            %li

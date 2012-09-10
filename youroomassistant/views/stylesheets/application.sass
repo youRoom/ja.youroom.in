@@ -1,0 +1,350 @@
+@import compass/reset
+@import compass/utilities
+@import compass/css3
+@import sassy-buttons
+@import ../vender/stylesheets/yui_fonts
+@import ../vender/stylesheets/colors
+@import ../vender/stylesheets/font-awesome
+@import ../vender/stylesheets/ligature_symbols
+@import shared/nav
+
+$black: #343430
+$orange: #f4bf7b
+$blue: #b1d5eb
+$green: #c8d48a
+
+// Links
+a
+  color: #3366CC
+  text-decoration: none
+  &:hover
+    color: #3366CC
+    text-decoration: none
+  &:focus,
+  &:active
+    outline: none
+  &:visited
+    // Default style for visited links
+
+body
+  background: url(/images/html.gif) #eaebe6
+  color: #0d0d0d
+
+.inner
+  width: 960px
+  margin: 0 auto
+
+.link_to_youroom
+  a
+    +sassy-button("simple", 10px, 14px, $green - 40)
+    font:
+      weight: bold
+
+#header
+  padding: 30px 0 0 0
+  hgroup
+    margin: 0 0 30px 0
+    position: relative
+    +clearfix
+    h1
+      img
+        margin: 0 auto 10px auto
+        display: block
+    h2
+      text-align: center
+      font:
+        size: $size-18px
+    .youroom_link
+      position: absolute
+      right: 0
+      top: 34px
+      a
+        text-decoration: none
+        color: #fff
+        background: rgba(0, 0, 0, .3)
+        padding: 8px 12px
+        +border-radius(4px)
+section.about
+  +clearfix
+  padding: 30px 0
+  h1
+    font:
+      size: $size-20px
+      weight: bold
+    margin: 0 0 12px 0
+    color: $black
+    i
+      margin: 0 4px 0 0
+      +inline-block
+      color: $green
+  .cases
+    padding: 10px 18px 14px 18px
+    +border-radius(4px)
+    background: rgba(255, 255, 255, .6)
+    clear: both
+    +box-shadow(rgba(0, 0, 0, .2) 0 1px 2px)
+    h2
+      font:
+        size: $size-22px
+      margin: 0 0 6px 0
+    h3
+      font:
+        size: $size-22px
+      margin: 0 0 6px 0
+    ul
+      li
+        +inline-block
+        margin: 0 20px 0 0
+        font:
+          size: $size-14px
+  .description
+    float: right
+    width: 680px
+    h2
+      margin: 0 0 8px 0
+      line-height: 1.4
+      font:
+        weight: bold
+        size: $size-22px
+    p
+      line-height: 1.7
+      color: $black + 30
+      font:
+        size: $size-15px
+      
+  ul
+    li
+      +clearfix
+      display: block
+      margin: 0 0 20px 0
+      div.image
+        margin: 0 20px 12px 10px
+        +box-shadow(rgba(0, 0, 0, .4) 0 2px 10px)
+        display: block
+        float: left
+        +clearfix
+        img
+          width: 300px
+          height: 200px
+          
+      .description
+        float: right
+        width: 620px
+        h2
+          font:
+            size: $size-22px
+        p
+          line-height: 1.7
+        ul
+          list-style-type: circle
+          li
+            margin: 0 0 0 0
+            color: $black + 30
+        
+section.howto
+  +clearfix
+  clear: both
+  background: rgba(50, 50, 50, .1)
+  padding: 30px 0
+  border:
+    top: 1px rgba(0, 0, 0, .1) dotted
+    bottom: 5px rgba(0, 0, 0, .1) solid
+  h2
+    text-align: center
+    margin: 0 0 40px 0
+    +text-shadow(rgba(255, 255, 255, .2) 0 1px 0)
+    font:
+      size: $size-24px
+      weight: bold
+  ol
+    li
+      width: 310px
+      float: left
+      .number
+        background: $black
+        display: block
+        height: 40px
+        width: 40px
+        text-align: center
+        line-height: 40px
+        +border-radius(20px)
+        position: absolute
+        color: #fff
+        z-index: 2
+        font:
+          size: $size-20px
+      .image
+        margin: 20px 0 12px 20px
+        +box-shadow(rgba(0, 0, 0, .4) 0 2px 10px)
+        display: block
+        +clearfix
+        img
+          width: 290px
+          height: 200px
+          background: #fff
+      .text
+        padding: 0 0 0 22px
+        line-height: 1.5
+      &:nth-child(2)
+        padding: 0 10px
+      
+#youroomassistant
+  +clearfix
+  .about
+    +clearfix
+    padding: 0 0 40px 0
+    .description
+      float: right
+      width: 540px
+      h1
+        font:
+          size: $size-26px
+          weight: normal
+        line-height: 1.5
+      p
+        margin: 0 0 0.8em 0
+        line-height: 1.5
+      ul.function
+        padding: 10px 0 0 0
+        +clearfix
+        li
+          line-height: 1.5
+          height: 128px
+          width: 240px
+          padding: 14px 12px 0 12px
+          +border-radius(3px)
+          p
+            font:
+              size: $size-12px
+          p.image
+            img
+              display: block
+              margin: 0 auto 14px auto
+        li.function_1
+          float: left
+          background: rgba(0, 172, 237, 0.2)
+        li.function_2
+          float: right
+          background: rgba(244, 191, 123, 0.4)
+    .illust
+      float: left
+      width: 400px
+      background: url(/images/eyecatch.png) no-repeat
+      height: 314px
+  .howto
+    h2
+      font:
+        size: 34px
+      margin: 0 0 30px 0
+      line-height: 100px
+      padding: 0 0 0 90px
+      background:
+        repeat: no-repeat
+        position: left center
+        size: 80px auto
+
+#twitter
+  +clearfix
+  background: rgba(0, 172, 237, .2)
+  .about
+    h1
+      font:
+        size: 34px
+      margin: 0 0 30px 0
+      line-height: 100px
+      padding: 0 0 0 90px
+      background:
+        image: url(/images/twitter_title.png)
+        repeat: no-repeat
+        position: left center
+        size: 80px auto
+
+#pivotal_tracker
+  +clearfix
+  background: rgba(37, 97, 136, .1)
+  .about
+    h1
+      font:
+        size: 34px
+      margin: 0 0 30px 0
+      line-height: 100px
+      padding: 0 0 0 90px
+      background:
+        image: url(/images/pivotal_tracker_title.png)
+        repeat: no-repeat
+        position: left center
+        size: 80px auto
+
+#reminder
+  +clearfix
+  background: rgba(241, 241, 37, .1)
+  .about
+    h1
+      font:
+        size: 34px
+      margin: 0 0 30px 0
+      line-height: 100px
+      padding: 0 0 0 90px
+      background:
+        image: url(/images/alert_title.png)
+        repeat: no-repeat
+        position: left center
+        size: 80px auto
+#footer
+  #page-top
+    position: fixed
+    right: 20px
+    .page-top
+      a
+        display: block
+        width: 150px
+        height: 40px
+        background: rgba(0, 0, 0, .4)
+        +border-top-radius(4px)
+        line-height: 40px
+        text:
+          align: left
+        color: #fff
+        clear: both
+        +clearfix
+        &:hover
+          background: rgba(0, 0, 0, .8)
+        i
+          font: 
+            size: $size-22px
+          margin: 0 6px 0 0
+          float: left
+          width: 40px
+          text-align: center
+        span
+          display: block
+          float: left
+    .to_youroom
+      a
+        display: block
+        width: 150px
+        height: 40px
+        background: rgba(0, 0, 0, .4)
+        +border-bottom-radius(4px)
+        line-height: 40px
+        border:
+          top: dotted 1px #ccc
+        text:
+          align: center
+        color: #fff
+        clear: both
+        +clearfix
+        &:hover
+          background: rgba(0, 0, 0, .8)
+        i
+          font: 
+            size: $size-22px
+          float: left
+          width: 40px
+          text-align: center
+          img
+            width: 20px
+        span
+          display: block
+          float: left
+        

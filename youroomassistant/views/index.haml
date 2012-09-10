@@ -1,0 +1,256 @@
+:javascript
+  $(function() {
+      
+    var showFlug = false;
+    var topBtn = $('#page-top');   
+    topBtn.css('bottom', '-100px');
+    var showFlug = false;
+    //スクロールが100に達したらボタン表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            if (showFlug == false) {
+                showFlug = true;
+                topBtn.stop().animate({'bottom' : '20px'}, 200);
+            }
+        } else {
+            if (showFlug) {
+                showFlug = false;
+                topBtn.stop().animate({'bottom' : '-100px'}, 200);
+            }
+        }
+    });
+  });
+
+
+%header#header
+  .inner
+    %hgroup
+      %h1
+        %img{:src => "images/logo_h1.png", :width => "600", :height => "65"}
+      %p.youroom_link
+        %a{:href => "/"}
+          youRoomにもどる
+#youroomassistant
+  %section.about
+    .inner
+      .description
+        %h1
+          youRoomにおけるチーム活動を支援する
+          %br
+          優秀なアシスタント機能
+        %p
+          チームやプロジェクトでの活動において、煩雑な仕事や誰にでもできる仕事はすべてコンピュータにやらせるべき。そこで、チーム内の仮想アシスタントとして面倒な仕事を処理してくれるのがyouRoomアシスタントです。
+        %ul.function
+          %li.function_1
+            %p.image
+              %img{:src => "images/function_1.png", :width => "195", :height => "48"}
+            %p
+              リマインダー機能、Twitterのつぶやき取得機能など、youRoomをより便利に使うための機能を備えています。
+          %li.function_2
+            %p.image
+              %img{:src => "images/function_2.png", :width => "195", :height => "45"}
+            %p
+              youRoomアシスタントの機能はいずれも無料で提供されます。設定も簡単。
+      .illust
+#main-nav-holder
+  %nav#main-nav
+    %ul
+      %li.youroomassistant
+        %a{:href => "#getting_started"}
+          %img{:src => "/images/logo.png"}
+          はじめかた
+      %li.reminder
+        %a{:href => "#reminder"}
+          %img{:src => "/images/alert.png"}
+          リマインダー
+      %li.twitter
+        %a{:href => "#twitter"}
+          %img{:src => "/images/twitter.png"}
+          Twitter取り込み
+      %li.pivotaltracker
+        %a{:href => "#pivotal_tracker"}
+          %img{:src => "/images/pivotal_tracker.png"}
+          Pivotal Trackerとの相互連携
+      %li
+        %a{:href => "/"}
+          %img{:src => "/images/youroom.png"}
+          youRoomにもどる
+%section.howto#getting_started
+  .inner
+    %h2
+      %i.icon-wrench
+      youRoomアシスタントのはじめかた
+    %ol
+      %li
+        %h4.number 1
+        %p.image
+          %img{:src => "/images/howto_01.png"}
+        %p.text
+          youRoomのアシスタント管理画面を開きます。
+          %br
+          (管理者権限のあるルーム > ルーム管理 > アシスタント)
+      %li
+        %h4.number 2
+        %p.image
+          %img{:src => "/images/howto_02.png"}
+        %p.text
+          「アシスタントの利用を開始する」ボタンをクリックします。
+      %li
+        %h4.number 3
+        %p.image
+          %img{:src => "/images/howto_03.png"}
+        %p.text
+          各機能の設定は上記のリンクをクリックしてください。設定用の外部サイトが開きます。
+
+#reminder
+  %section.about
+    .inner
+      %h1 リマインダー
+      %ul
+        %li
+          .image
+            %img{:src => "/images/reminder_about_01.png"}
+          .description
+            %h2 忘れがちな毎月のタスクをアシスタントがお知らせ！
+            %p 毎月の決まった作業を忘れずにするのは大変です。それをチームで共有するとなれば、なおさら大変です。
+            %p youRoomアシスタントのリマインダー機能を使えば、毎月の決まった日に予め登録しておいたメッセージがyouRoomに書き込まれます。
+        %li
+          .image
+            %img{:src => "/images/reminder_about_02.png"}
+          .description
+            %h2 タスクの進捗も可視化されます
+            %p チームのメンバーは定期的に発信されるアシスタントのメッセージをトリガーにして、作業に取りかかることができます。普段からyouRoomを活用しているチームであれば、自然にメッセージを受け取れるはずです。youRoomはタスクを管理するツールとしても優れているため、リマインダー機能とは大変相性が良いのです。
+      .cases
+        %h2 こんなケースで使えます
+        %ul
+          %li
+            %i.icon-caret-right
+            毎月の請求書の発行を忘れないようにする
+          %li
+            %i.icon-caret-right
+            毎月の経費の入力を忘れないように全員に指示する  
+  %section.howto
+    .inner
+      %h2
+        %i.icon-wrench
+        リマインダーの設定方法
+      %ol
+        %li
+          %h4.number 1
+          .image
+            %img{:src => '/images/reminder_howto_01.png'}
+          %p.text
+            アシスタントのルーム設定画面にある「リマインダーを作成する」リンクをクリックします。
+        %li
+          %h4.number 2
+          .image
+            %img{:src => '/images/reminder_howto_02.png'}
+          %p.text
+            スケジュールとメッセージを入力します。
+        %li
+          %h4.number 3
+          .image
+            %img{:src => '/images/reminder_howto_03.png'}
+          %p.text
+            「登録する」ボタンをクリックすれば設定完了です。以降はスケジュールに設定された日になるとメッセージがyouRoomに投稿されます。
+#twitter
+  %section.about
+    .inner
+      %h1
+        Twitter取り込み
+      %ul
+        %li
+          .image
+            %img{:src => "/images/twitter_about_01.png"}
+          .description
+            %h2 Twitter上のつぶやきを収集してチームで共有しましょう
+            %p 自分たちの作品やサービスに関するTwitter上のつぶやきは、当然誰でも気になりますよね。
+            %p youRoomアシスタントのTwitter取り込み機能を使えば、設定されたキーワードに関するつぶやきを一定時間おきに取得して、youRoomに書き込んでくれます。
+            %p youRoomのルーム内に書き込まれたつぶやきはチーム内で共有することができます。着目すべきつぶやきがあれば、そこへコメントをつけることもできるので、youRoomをユーザサポートに活かすこともできます。
+      .cases
+        %h2 こんなケースで使えます
+        %ul
+          %li
+            %i.icon-caret-right
+            自社製品の口コミの様子をチームで共有したい
+          %li
+            %i.icon-caret-right
+            ハッシュタグでイベント時のつぶやきを集めたい
+  %section.howto
+    .inner
+      %h2
+        %i.icon-wrench
+        Twitter取り込みの設定方法
+      %ol
+        %li
+          %h4.number 1
+          .image
+            %img{:src => "/images/twitter_howto_01.png"}
+          %p.text
+            「Twitterで認証する」ボタンをクリックして、Twitter認証を行います。(初回のみ)
+        %li
+          %h4.number 2
+          .image
+            %img{:src => "/images/twitter_howto_02.png"}
+          %p.text
+            Twitterから取り込みたいキーワードを指定します。特定のキーワードを除外する場合は除外キーワードを入力してください。複数ある場合はカンマ(,)で区切ります。
+        %li
+          %h4.number 3
+          .image
+            %img{:src => "/images/twitter_howto_03.png"}
+          %p.text
+            「登録する」ボタンをクリックすると設定完了です。以降は定期的に条件に合致するツイートがyouRoomに取り込まれます。
+
+#pivotal_tracker
+  %section.about
+    .inner
+      %h1 Pivotal Trackerとの相互連携
+      %ul
+        %li
+          .image
+            %img{:src => "/images/pivotal_about_01.png"}
+          .description
+            %h2 Pivotal TrackerとyouRoomを連携させて、さらにアジャイルなソフトウェア開発を
+            %p アジャイルにソフトウェア開発をするチームなら、youRoomをきっとうまく活用できます。
+            %p また、Pivotal Trackerはアジャイル開発に最適な要件管理ツールです。
+            %p youRoomアシスタントを利用してこの二つのツールを連携させれば、アジャイルなソフトウェア開発をさらに加速させることができます。
+        %li
+          .image
+            %img{:src => "/images/pivotal_about_02.png"}
+          .description
+            %h2 youRoom上での議論を即座にチケット化
+            %p youRoom上で議論した内容をPivotal Trackerのチケットとして登録したい場合、Pivotal Trackerに同じ情報を書き込むのはDRYではありません。
+            %p youRoomアシスタントを導入すれば、特定の書式を持ったコメントからPivotal Trackerのチケットが自動的に作成されます。
+            %p また、チケットのDescriptionにはyouRoomのURLも記入されます。
+        %li
+          .image
+            %img{:src => "/images/pivotal_about_03.png"}
+          .description
+            %h2 開発の進捗をyouRoom上でキャッチ！
+            %p Pivotal Trackerのチケットが次のステータスに進むとyouRoom上に通知されます。わざわざPivotal Trackerに見に行かなくても、youRoomを確認するだけで開発の進捗を把握することができます。
+  %section.howto
+    .inner
+      %h2
+        %i.icon-wrench
+        Pivotal Tracker連携の設定方法
+      %ol
+        %li
+          %h4.number 1
+          .image
+            %img{:src => "/images/pivotal_howto_01.png"}
+          %p.text
+            Pivotal Trackerにアクセスし、
+            %a{href: "https://www.pivotaltracker.com/profile", target: "_blank"}PROFILEページ
+            に表示されているAPI Tokenと、ProjectページのURLに表示されているProject IDを確認します。
+        %li
+          %h4.number 2
+          .image
+            %img{:src => "/images/pivotal_howto_02.png"}
+          %p.text
+            アシスタントのルーム設定画面を開き、API TokenとProject IDを入力すれば設定完了です。
+        %li
+          %h4.number 3
+          .image
+            %img{:src => "/images/pivotal_about_02.png"}
+          %p.text
+            以降は定期的にPivotal TrackerとyouRoom間で情報がやりとりされます。youRoomの議論からチケットを発行したい場合は、「#pivo:(チケットのタイトル)」という書式でコメントを書き込みます。

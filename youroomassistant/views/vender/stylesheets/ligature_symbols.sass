@@ -1,0 +1,760 @@
+/*  Font Awesome
+ *    the iconic font designed for use with Twitter Bootstrap
+ *    -------------------------------------------------------
+ *    The full suite of pictographic icons, examples, and documentation
+ *    can be found at: http://fortawesome.github.com/Font-Awesome/
+ *
+ *    License
+ *    -------------------------------------------------------
+ *    The Font Awesome webfont, CSS, and LESS files are licensed under CC BY 3.0:
+ *    http://creativecommons.org/licenses/by/3.0/ A mention of
+ *    'Font Awesome - http://fortawesome.github.com/Font-Awesome' in human-readable
+ *    source code is considered acceptable attribution (most common on the web).
+ *    If human readable source code is not available to the end user, a mention in
+ *    an 'About' or 'Credits' screen is considered acceptable (most common in desktop
+ *    or mobile software).
+ *
+ *    Contact
+ *    -------------------------------------------------------
+ *    Email: dave@davegandy.com
+ *    Twitter: http://twitter.com/fortaweso_me
+ *    Work: Lead Product Designer @ http://kyruus.com
+
+
+@font-face
+  font-family: "LigatureSymbols"
+  src: url('fonts/LigatureSymbols.eot')
+  src: url('fonts/LigatureSymbols.eot?#iefix') format("eot"), url('fonts/LigatureSymbols.woff') format("woff"), url('fonts/LigatureSymbols.ttf') format("truetype"), url('fonts/LigatureSymbols.svg#LigatureSymbolsRegular') format("svg")
+  font-weight: normal
+  font-style: normal
+
+/*+font-face("LigatureSymbols", font-files("#{$LigatureSymbolsPath}.woff", woff, "#{$LigatureSymbolsPath}.ttf", truetype, "#{$LigatureSymbolsPath}.svg#LigatureSymbolsRegular", svg), "#{$LigatureSymbolsPath}.eot", normal, normal)
+
+/*  Font Awesome styles
+ *  -------------------------------------------------------
+
+
+=symbol
+  font-family: 'LigatureSymbols'
+  -webkit-text-rendering: optimizeLegibility
+  -moz-text-rendering: optimizeLegibility
+  -ms-text-rendering: optimizeLegibility
+  -o-text-rendering: optimizeLegibility
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-font-smoothing: antialiased
+  -ms-font-smoothing: antialiased
+  -o-font-smoothing: antialiased
+  font-smoothing: antialiased
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1
+  -moz-font-feature-settings: "liga=1, dlig=1"
+  -ms-font-feature-settings: "liga" 1, "dlig" 1
+  -o-font-feature-settings: "liga" 1, "dlig" 1
+  font-feature-settings: "liga" 1, "dlig" 1
+  &:before
+    ont-family: LigatureSymbols
+    font-weight: normal
+    font-style: normal
+    display: inline-block
+    text-decoration: inherit
+    ont-family: LigatureSymbols
+    font-weight: normal
+    font-style: normal
+    display: inline-block
+    text-decoration: inherit
+    content: attr(title)
+    margin-right: 0.1em
+    font-size: 130%
+    font-family: 'LigatureSymbols'
+    -webkit-text-rendering: optimizeLegibility
+    -moz-text-rendering: optimizeLegibility
+    -ms-text-rendering: optimizeLegibility
+    -o-text-rendering: optimizeLegibility
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+    -moz-font-smoothing: antialiased
+    -ms-font-smoothing: antialiased
+    -o-font-smoothing: antialiased
+    font-smoothing: antialiased
+    -webkit-font-feature-settings: "liga" 1, "dlig" 1
+    -moz-font-feature-settings: "liga=1, dlig=1"
+    -ms-font-feature-settings: "liga" 1, "dlig" 1
+    -o-font-feature-settings: "liga" 1, "dlig" 1
+    font-feature-settings: "liga" 1, "dlig" 1
+
+[class^="symbol-"],
+[class*=" symbol-"]
+  +symbol
+
+
+/* makes the font 33% larger relative to the icon container
+.symbol-large:before
+  vertical-align: middle
+  font-size: 4 / 3em
+
+.btn, .nav-tabs
+  [class^="symbol-"],
+  [class*=" symbol-"]
+    /* keeps button heights with and without icons the same
+    line-height: .9em
+    +symbol
+
+li
+  [class^="symbol-"],
+  [class*=" symbol-"]
+    display: inline-block
+    width: 1.25em
+    text-align: center
+    +symbol
+  .symbol-large:before,
+  .symbol-large:before
+    /* 1.5 increased font size for symbol-large * 1.25 width
+    width: 1.5 * 1.25em
+    +symbol
+
+ul.icons
+  list-style-type: none
+  margin-left: 2em
+  text-indent: -0.8em
+  li
+    [class^="symbol-"],
+    [class*=" symbol-"]
+      width: .8em
+    .symbol-large:before,
+    .symbol-large:before
+      /* 1.5 increased font size for symbol-large * 1.25 width
+      vertical-align: initial
+      //      width: 1.5*1.25em;
+      +symbol
+
+/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+ *  readers do not read off random characters that represent icons
+.symbol-file:before
+  content: "file"
+
+.symbol-list:before
+  content: "list"
+
+.symbol-print:before
+  content: "print"
+
+.symbol-tile:before
+  content: "tile"
+
+.symbol-delete:before
+  content: "delete"
+
+.symbol-table:before
+  content: "table"
+
+.symbol-clear:before
+  content: "clear"
+
+.symbol-user:before
+  content: "\f007"
+
+.symbol-copy:before
+  content: "copy"
+
+.symbol-save:before
+  content: "save"
+
+.symbol-cut:before
+  content: "cut"
+
+.symbol-upload:before
+  content: "upload"
+
+.symbol-backspace:before
+  content: "backspace"
+
+.symbol-cloud:before
+  content: "cloud"
+
+.symbol-alignleft:before
+  content: "alignleft"
+
+.symbol-folder:before
+  content: "folder"
+
+.symbol-aligncenter:before
+  content: "aligncenter"
+
+.symbol-camera:before
+  content: "camera"
+
+.symbol-alignright:before
+  content: "alignright"
+
+.symbol-trash:before
+  content: "\f014"
+
+.symbol-photo:before
+  content: "photo"
+
+.symbol-alignadjust:before
+  content: "alignadjust"
+
+.symbol-image:before
+  content: "image"
+
+.symbol-italic:before
+  content: "italic"
+
+.symbol-barcode:before
+  content: "barcode"
+
+.symbol-bold:before
+  content: "bold"
+
+.symbol-phone:before
+  content: "phone"
+
+.symbol-underline:before
+  content: "underline"
+
+.symbol-music:before
+  content: "music"
+
+.symbol-code:before
+  content: "code"
+
+.symbol-video:before
+  content: "video"
+
+.symbol-link:before
+  content: "link"
+
+.symbol-playmedia:before
+  content: "playmedia"
+
+.symbol-quote:before
+  content: "quote"
+
+.symbol-record:before
+  content: "record"
+
+.symbol-graph:before
+  content: "graph"
+
+.symbol-play:before
+  content: "play"
+
+.symbol-magic:before
+  content: "magic"
+
+.symbol-brush:before
+  content: "brush"
+
+.symbol-pause:before
+  content: "pause"
+
+.symbol-stop:before
+  content: "stop"
+
+.symbol-color:before
+  content: "color"
+
+.symbol-eject:before
+  content: "eject"
+
+.symbol-contrast:before
+  content: "contrast"
+
+.symbol-bell:before
+  content: "bell"
+
+.symbol-ink:before
+  content: "ink"
+
+.symbol-volumeup:before
+  content: "volumeup"
+
+.symbol-gradation:before
+  content: "gradation"
+
+.symbol-volumedown:before
+  content: "volumedown"
+
+.symbol-sepia:before
+  content: "sepia"
+
+.symbol-volume:before
+  content: "volume"
+
+.symbol-invert:before
+  content: "invert"
+
+.symbol-off:before
+  content: "off"
+
+.symbol-paint:before
+  content: "paint"
+
+.symbol-light:before
+  content: "light"
+
+.symbol-paramater:before
+  content: "paramater"
+
+.symbol-dark:before
+  content: "dark"
+
+.symbol-crop:before
+  content: "crop"
+
+.symbol-lock:before
+  content: "lock"
+
+.symbol-check:before
+  content: "check"
+
+.symbol-unlock:before
+  content: "unlock"
+
+.symbol-edit:before
+  content: "\f044"
+
+.symbol-checkbox:before
+  content: "checkbox"
+
+.symbol-flag:before
+  content: "flag"
+
+.symbol-checkboxempty:before
+  content: "checkboxempty"
+
+.symbol-wifi:before
+  content: "wifi"
+
+.symbol-pc:before
+  content: "pc"
+
+.symbol-time:before
+  content: "time"
+
+.symbol-keyboard:before
+  content: "keyboard"
+
+.symbol-map:before
+  content: "map"
+
+.symbol-mobile:before
+  content: "mobile"
+
+.symbol-geo:before
+  content: "geo"
+
+.symbol-horizontal:before
+  content: "horizontal"
+
+.symbol-location:before
+  content: "location"
+
+.symbol-vertical:before
+  content: "vertical"
+
+.symbol-pin:before
+  content: "pin"
+
+.symbol-web:before
+  content: "web"
+
+.symbol-walking:before
+  content: "walking"
+
+.symbol-mail:before
+  content: "mail"
+
+.symbol-bicycle:before
+  content: "bicycle"
+
+.symbol-ok-sign:before
+  content: "\f058"
+
+.symbol-shopping:before
+  content: "shopping"
+
+.symbol-carn:before
+  content: "car"
+
+.symbol-dashboard:before
+  content: "dashboard"
+
+.symbol-bus:before
+  content: "bus"
+
+.symbol-key:before
+  content: "key"
+
+.symbol-plane:before
+  content: "plane"
+
+.symbol-sns:before
+  content: "sns"
+
+.symbol-compass:before
+  content: "compass"
+
+.symbol-calender:before
+  content: "calender"
+
+.symbol-arrowup:before
+  content: "arrowup"
+
+.symbol-ban:before
+  content: "ban"
+
+.symbol-arrowright:before
+  content: "arrowright"
+
+.symbol-remove:before
+  content: "remove"
+
+.symbol-arrowdown:before
+  content: "arrowdown"
+
+.symbol-pen:before
+  content: "pen"
+
+.symbol-arrowleft:before
+  content: "arrowleft"
+
+.symbol-exclamation-sign:before
+  content: "\f06a"
+
+.symbol-eraser:before
+  content: "eraser"
+
+.symbol-up:before
+  content: "up"
+
+.symbol-edit:before
+  content: "edit"
+
+.symbol-eye-open:before
+  content: "\f06e"
+
+.symbol-right:before
+  content: "right"
+
+.symbol-tabs:before
+  content: "tabs"
+
+.symbol-down:before
+  content: "down"
+
+.symbol-tag:before
+  content: "tag"
+
+.symbol-left:before
+  content: "left"
+
+.symbol-setup:before
+  content: "setup"
+
+.symbol-back:before
+  content: "back"
+
+.symbol-chevron-up:before
+  content: "\f077"
+
+.symbol-setting:before
+  content: "setting"
+
+.symbol-next:before
+  content: "next"
+
+.symbol-etc:before
+  content: "etc"
+
+.symbol-dropdown:before
+  content: "dropdown"
+
+.symbol-clip:before
+  content: "clip"
+
+.symbol-sort:before
+  content: "sort"
+
+.symbol-bookmark:before
+  content: "bookmark"
+
+.symbol-good:before
+  content: "good"
+
+.symbol-book:before
+  content: "book"
+
+.symbol-facebook-sign:before
+  content: "\f082"
+
+.symbol-bad:before
+  content: "bad"
+
+.symbol-album:before
+  content: "album"
+
+.symbol-bad:before
+  content: "bad"
+
+.symbol-album:before
+  content: "album"
+
+.symbol-full:before
+  content: "full"
+
+.symbol-user:before
+  content: "user"
+
+.symbol-small:before
+  content: "small"
+
+.symbol-friend:before
+  content: "friend"
+
+.symbol-move:before
+  content: "move"
+
+.symbol-group:before
+  content: "group"
+
+.symbol-undo:before
+  content: "undo"
+
+.symbol-frustrate:before
+  content: "frustrate"
+
+.symbol-forward:before
+  content: "forward"
+
+.symbol-laugh:before
+  content: "laugh"
+
+.symbol-reply:before
+  content: "reply"
+
+.symbol-wink:before
+  content: "wink"
+
+.symbol-share:before
+  content: "share"
+
+.symbol-smile:before
+  content: "smile"
+
+.symbol-login:before
+  content: "login"
+
+.symbol-surprise:before
+  content: "surprise"
+
+.symbol-logout:before
+  content: "logout"
+
+.symbol-trouble:before
+  content: "trouble"
+
+.symbol-exchange:before
+  content: "exchange"
+
+.symbol-game:before
+  content: "game"
+
+.symbol-shuffle:before
+  content: "shuffle"
+
+.symbol-globe:before
+  content: "globe"
+
+.symbol-repeat:before
+  content: "repeat"
+
+.symbol-home:before
+  content: "home"
+
+.symbol-refresh:before
+  content: "refresh"
+
+.symbol-building:before
+  content: "building"
+
+.symbol-sync:before
+  content: "sync"
+
+.symbol-rss:before
+  content: "rss"
+
+.symbol-external:before
+  content: "external"
+
+.symbol-app:before
+  content: "app"
+
+.symbol-addstar:before
+  content: "addstar"
+
+.symbol-memo:before
+  content: "memo"
+
+.symbol-star:before
+  content: "star"
+
+.symbol-meal:before
+  content: "meal"
+
+.symbol-starempty:before
+  content: "starempty"
+
+.symbol-feed:before
+  content: "feed"
+
+.symbol-coffee:before
+  content: "coffee"
+
+.symbol-heart:before
+  content: "heart"
+
+.symbol-present:before
+  content: "present"
+
+.symbol-heartempty:before
+  content: "heartempty"
+
+.symbol-twinkle:before
+  content: "twinkle"
+
+.symbol-view:before
+  content: "view"
+
+.symbol-crown:before
+  content: "crown"
+
+.symbol-comment:before
+  content: "comment"
+
+.symbol-category:before
+  content: "category"
+
+.symbol-comments:before
+  content: "comments"
+
+.symbol-circle:before
+  content: "circle"
+
+.symbol-plus:before
+  content: "plus"
+
+.symbol-info:before
+  content: "info"
+
+.symbol-minus:before
+  content: "minus"
+
+.symbol-help:before
+  content: "help"
+
+.symbol-zoomin:before
+  content: "zoomin"
+
+.symbol-refreshbutton:before
+  content: "refreshbutton"
+
+.symbol-zoomout:before
+  content: "zoomout"
+
+.symbol-tilemenu:before
+  content: "tilemenu"
+
+.symbol-notify:before
+  content: "notify"
+
+.symbol-apple:before
+  content: "apple"
+
+.symbol-evernote:before
+  content: "evernote"
+
+.symbol-android:before
+  content: "android"
+
+.symbol-github:before
+  content: "github"
+
+.symbol-windows:before
+  content: "windows"
+
+.symbol-dribbble:before
+  content: "dribbble"
+
+.symbol-amazon:before
+  content: "amazon"
+
+.symbol-cookpad:before
+  content: "cookpad"
+
+.symbol-facebook:before
+  content: "facebook"
+
+.symbol-instapaper:before
+  content: "instapaper"
+
+.symbol-twitter:before
+  content: "twitter"
+
+.symbol-readability:before
+  content: "readability"
+
+.symbol-google:before
+  content: "google"
+
+.symbol-picasa:before
+  content: "picasa"
+
+.symbol-hatena:before
+  content: "hatena"
+
+.symbol-delicious:before
+  content: "delicious"
+
+.symbol-linkedin:before
+  content: "linkedin"
+
+.symbol-youtube:before
+  content: "youtube"
+
+.symbol-mixi:before
+  content: "mixi"
+
+.symbol-chrome:before
+  content: "chrome"
+
+.symbol-skype:before
+  content: "skype"
+
+.symbol-safari:before
+  content: "safari"
+
+.symbol-forsquare:before
+  content: "forsquare"
+
+.symbol-sleipnir:before
+  content: "sleipnir"
+
+.symbol-pinterest:before
+  content: "pinterest"
+
+.symbol-firefox:before
+  content: "firefox"
+
+.symbol-flickr:before
+  content: "flickr"
+
+.symbol-opera:before
+  content: "opera"
+
+.symbol-tumblr:before
+  content: "tumblr"
+
+.symbol-internetexplorer:before
+  content: "internetexplorer"

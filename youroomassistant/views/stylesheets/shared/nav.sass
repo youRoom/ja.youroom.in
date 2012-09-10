@@ -1,0 +1,87 @@
+#main-nav-holder
+  height: 60px
+  overflow: hidden
+
+#main-nav
+  background: $black
+  +box-shadow(rgba(0, 0, 0, .4) 0 3px 6px 0)
+  z-index: 1000
+  ul
+    margin: 0 auto 30px auto
+    height: 60px
+    text-align: center
+    font-size: 14px
+    width: 960px
+    color: #ddd
+    display: block
+    +clearfix
+    position: relative
+  li
+    display: block
+    border-left: 1px solid $black + 20
+    float: left
+    height: 60px
+    +clearfix
+    vertical-align: middle !important
+    &:first-child
+      border-left: 0
+    a
+      display: block
+      color: #fff
+      text-decoration: none
+      line-height: 24px
+      height: 24px
+      padding: 18px
+      margin: 0
+      font:
+        size: $size-14px
+      vertical-align: middle !important
+      img
+        width: auto
+        height: 24px
+        float: left
+        margin: 0 6px 0 0
+      &:hover
+        background: $black + 40
+
+.sticky #main-nav
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  ul
+    margin: 0 auto
+
+.top
+  position: fixed
+  right: 15px
+  bottom: 15px
+  width: 150px
+  padding: 12px
+  line-height: 18px
+  background: #333
+  color: #888
+  display: block
+  text:
+    transform: uppercase
+    decoration: none
+    align: center
+  font:
+    size: 14px
+  +border-radius(10px)
+  behavior: url(../PIE.htc)
+  &:hover
+    color: #eee
+    &:before
+      border-bottom-color: #eee
+
+.opacity .top
+  opacity: 1
+  -webkit-transition: opacity 700ms linear
+  -moz-transition: opacity 700ms linear
+  transition: opacity 700ms linear
+  &.hidden
+    opacity: 0
+
+.no-opacity .top.hidden
+  display: none

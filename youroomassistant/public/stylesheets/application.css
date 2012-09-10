@@ -1,0 +1,2754 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+ * Code licensed under the BSD License:
+ * http://developer.yahoo.com/font-size/license.html
+ * version: 3.3.0
+ * build: 3167 */
+body {
+  font: 13px/1.231 arial, helvetica, clean, sans-serif;
+  *font-size: small;
+  *font: x-small;
+}
+
+select, input, button, textarea {
+  font: 99% arial, helvetica, clean, sans-serif;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+pre, code, kbd, samp, tt {
+  font-family: monospace;
+  *font-size: 108%;
+  line-height: 100%;
+}
+
+/*  Font Awesome
+ *    the iconic font designed for use with Twitter Bootstrap
+ *    -------------------------------------------------------
+ *    The full suite of pictographic icons, examples, and documentation
+ *    can be found at: http://fortawesome.github.com/Font-Awesome/
+ *
+ *    License
+ *    -------------------------------------------------------
+ *    The Font Awesome webfont, CSS, and LESS files are licensed under CC BY 3.0:
+ *    http://creativecommons.org/licenses/by/3.0/ A mention of
+ *    'Font Awesome - http://fortawesome.github.com/Font-Awesome' in human-readable
+ *    source code is considered acceptable attribution (most common on the web).
+ *    If human readable source code is not available to the end user, a mention in
+ *    an 'About' or 'Credits' screen is considered acceptable (most common in desktop
+ *    or mobile software).
+ *
+ *    Contact
+ *    -------------------------------------------------------
+ *    Email: dave@davegandy.com
+ *    Twitter: http://twitter.com/fortaweso_me
+ *    Work: Lead Product Designer @ http://kyruus.com */
+@font-face {
+  font-family: "FontAwesome";
+  src: url("/fonts/fontawesome-webfont.eot");
+  src: url("/fonts/fontawesome-webfont.eot?#iefix") format("eot"), url("fonts/fontawesome-webfont.woff") format("woff"), url("/fonts/fontawesome-webfont.ttf") format("truetype"), url("fonts/fontawesome-webfont.svg#FontAwesomeRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*+font-face("FontAwesome", font-files("#{$fontAwesomePath}.woff", woff, "#{$fontAwesomePath}.ttf", truetype, "#{$fontAwesomePath}.svg#FontAwesomeRegular", svg), "#{$fontAwesomePath}.eot", normal, normal) */
+/*  Font Awesome styles
+ *  ------------------------------------------------------- */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: FontAwesome, serif;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+  vertical-align: middle;
+  font-size: 4/3em;
+}
+
+.btn [class^="icon-"],
+.btn [class*=" icon-"], .nav-tabs [class^="icon-"], .nav-tabs [class*=" icon-"] {
+  /* keeps button heights with and without icons the same */
+  line-height: 0.9em;
+}
+
+li [class^="icon-"],
+li [class*=" icon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}
+li .icon-large:before,
+li .icon-large:before {
+  /* 1.5 increased font size for icon-large * 1.25 width */
+  width: 1.875em;
+}
+
+ul.icons {
+  list-style-type: none;
+  margin-left: 2em;
+  text-indent: -0.8em;
+}
+ul.icons li [class^="icon-"],
+ul.icons li [class*=" icon-"] {
+  width: 0.8em;
+}
+ul.icons li .icon-large:before,
+ul.icons li .icon-large:before {
+  /* 1.5 increased font size for icon-large * 1.25 width */
+  vertical-align: initial;
+}
+
+/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+ *  readers do not read off random characters that represent icons */
+.icon-glass:before {
+  content: "\f000";
+}
+
+.icon-music:before {
+  content: "\f001";
+}
+
+.icon-search:before {
+  content: "\f002";
+}
+
+.icon-envelope:before {
+  content: "\f003";
+}
+
+.icon-heart:before {
+  content: "\f004";
+}
+
+.icon-star:before {
+  content: "\f005";
+}
+
+.icon-star-empty:before {
+  content: "\f006";
+}
+
+.icon-user:before {
+  content: "\f007";
+}
+
+.icon-film:before {
+  content: "\f008";
+}
+
+.icon-th-large:before {
+  content: "\f009";
+}
+
+.icon-th:before {
+  content: "\f00a";
+}
+
+.icon-th-list:before {
+  content: "\f00b";
+}
+
+.icon-ok:before {
+  content: "\f00c";
+}
+
+.icon-remove:before {
+  content: "\f00d";
+}
+
+.icon-zoom-in:before {
+  content: "\f00e";
+}
+
+.icon-zoom-out:before {
+  content: "\f010";
+}
+
+.icon-off:before {
+  content: "\f011";
+}
+
+.icon-signal:before {
+  content: "\f012";
+}
+
+.icon-cog:before {
+  content: "\f013";
+}
+
+.icon-trash:before {
+  content: "\f014";
+}
+
+.icon-home:before {
+  content: "\f015";
+}
+
+.icon-file:before {
+  content: "\f016";
+}
+
+.icon-time:before {
+  content: "\f017";
+}
+
+.icon-road:before {
+  content: "\f018";
+}
+
+.icon-download-alt:before {
+  content: "\f019";
+}
+
+.icon-download:before {
+  content: "\f01a";
+}
+
+.icon-upload:before {
+  content: "\f01b";
+}
+
+.icon-inbox:before {
+  content: "\f01c";
+}
+
+.icon-play-circle:before {
+  content: "\f01d";
+}
+
+.icon-repeat:before {
+  content: "\f01e";
+}
+
+/* \f020 doesn't work in Safari. all shifted one down */
+.icon-refresh:before {
+  content: "\f021";
+}
+
+.icon-list-alt:before {
+  content: "\f022";
+}
+
+.icon-lock:before {
+  content: "\f023";
+}
+
+.icon-flag:before {
+  content: "\f024";
+}
+
+.icon-headphones:before {
+  content: "\f025";
+}
+
+.icon-volume-off:before {
+  content: "\f026";
+}
+
+.icon-volume-down:before {
+  content: "\f027";
+}
+
+.icon-volume-up:before {
+  content: "\f028";
+}
+
+.icon-qrcode:before {
+  content: "\f029";
+}
+
+.icon-barcode:before {
+  content: "\f02a";
+}
+
+.icon-tag:before {
+  content: "\f02b";
+}
+
+.icon-tags:before {
+  content: "\f02c";
+}
+
+.icon-book:before {
+  content: "\f02d";
+}
+
+.icon-bookmark:before {
+  content: "\f02e";
+}
+
+.icon-print:before {
+  content: "\f02f";
+}
+
+.icon-camera:before {
+  content: "\f030";
+}
+
+.icon-font:before {
+  content: "\f031";
+}
+
+.icon-bold:before {
+  content: "\f032";
+}
+
+.icon-italic:before {
+  content: "\f033";
+}
+
+.icon-text-height:before {
+  content: "\f034";
+}
+
+.icon-text-width:before {
+  content: "\f035";
+}
+
+.icon-align-left:before {
+  content: "\f036";
+}
+
+.icon-align-center:before {
+  content: "\f037";
+}
+
+.icon-align-right:before {
+  content: "\f038";
+}
+
+.icon-align-justify:before {
+  content: "\f039";
+}
+
+.icon-list:before {
+  content: "\f03a";
+}
+
+.icon-indent-left:before {
+  content: "\f03b";
+}
+
+.icon-indent-right:before {
+  content: "\f03c";
+}
+
+.icon-facetime-video:before {
+  content: "\f03d";
+}
+
+.icon-picture:before {
+  content: "\f03e";
+}
+
+.icon-pencil:before {
+  content: "\f040";
+}
+
+.icon-map-marker:before {
+  content: "\f041";
+}
+
+.icon-adjust:before {
+  content: "\f042";
+}
+
+.icon-tint:before {
+  content: "\f043";
+}
+
+.icon-edit:before {
+  content: "\f044";
+}
+
+.icon-share:before {
+  content: "\f045";
+}
+
+.icon-check:before {
+  content: "\f046";
+}
+
+.icon-move:before {
+  content: "\f047";
+}
+
+.icon-step-backward:before {
+  content: "\f048";
+}
+
+.icon-fast-backward:before {
+  content: "\f049";
+}
+
+.icon-backward:before {
+  content: "\f04a";
+}
+
+.icon-play:before {
+  content: "\f04b";
+}
+
+.icon-pause:before {
+  content: "\f04c";
+}
+
+.icon-stop:before {
+  content: "\f04d";
+}
+
+.icon-forward:before {
+  content: "\f04e";
+}
+
+.icon-fast-forward:before {
+  content: "\f050";
+}
+
+.icon-step-forward:before {
+  content: "\f051";
+}
+
+.icon-eject:before {
+  content: "\f052";
+}
+
+.icon-chevron-left:before {
+  content: "\f053";
+}
+
+.icon-chevron-right:before {
+  content: "\f054";
+}
+
+.icon-plus-sign:before {
+  content: "\f055";
+}
+
+.icon-minus-sign:before {
+  content: "\f056";
+}
+
+.icon-remove-sign:before {
+  content: "\f057";
+}
+
+.icon-ok-sign:before {
+  content: "\f058";
+}
+
+.icon-question-sign:before {
+  content: "\f059";
+}
+
+.icon-info-sign:before {
+  content: "\f05a";
+}
+
+.icon-screenshot:before {
+  content: "\f05b";
+}
+
+.icon-remove-circle:before {
+  content: "\f05c";
+}
+
+.icon-ok-circle:before {
+  content: "\f05d";
+}
+
+.icon-ban-circle:before {
+  content: "\f05e";
+}
+
+.icon-arrow-left:before {
+  content: "\f060";
+}
+
+.icon-arrow-right:before {
+  content: "\f061";
+}
+
+.icon-arrow-up:before {
+  content: "\f062";
+}
+
+.icon-arrow-down:before {
+  content: "\f063";
+}
+
+.icon-share-alt:before {
+  content: "\f064";
+}
+
+.icon-resize-full:before {
+  content: "\f065";
+}
+
+.icon-resize-small:before {
+  content: "\f066";
+}
+
+.icon-plus:before {
+  content: "\f067";
+}
+
+.icon-minus:before {
+  content: "\f068";
+}
+
+.icon-asterisk:before {
+  content: "\f069";
+}
+
+.icon-exclamation-sign:before {
+  content: "\f06a";
+}
+
+.icon-gift:before {
+  content: "\f06b";
+}
+
+.icon-leaf:before {
+  content: "\f06c";
+}
+
+.icon-fire:before {
+  content: "\f06d";
+}
+
+.icon-eye-open:before {
+  content: "\f06e";
+}
+
+.icon-eye-close:before {
+  content: "\f070";
+}
+
+.icon-warning-sign:before {
+  content: "\f071";
+}
+
+.icon-plane:before {
+  content: "\f072";
+}
+
+.icon-calendar:before {
+  content: "\f073";
+}
+
+.icon-random:before {
+  content: "\f074";
+}
+
+.icon-comment:before {
+  content: "\f075";
+}
+
+.icon-magnet:before {
+  content: "\f076";
+}
+
+.icon-chevron-up:before {
+  content: "\f077";
+}
+
+.icon-chevron-down:before {
+  content: "\f078";
+}
+
+.icon-retweet:before {
+  content: "\f079";
+}
+
+.icon-shopping-cart:before {
+  content: "\f07a";
+}
+
+.icon-folder-close:before {
+  content: "\f07b";
+}
+
+.icon-folder-open:before {
+  content: "\f07c";
+}
+
+.icon-resize-vertical:before {
+  content: "\f07d";
+}
+
+.icon-resize-horizontal:before {
+  content: "\f07e";
+}
+
+.icon-bar-chart:before {
+  content: "\f080";
+}
+
+.icon-twitter-sign:before {
+  content: "\f081";
+}
+
+.icon-facebook-sign:before {
+  content: "\f082";
+}
+
+.icon-camera-retro:before {
+  content: "\f083";
+}
+
+.icon-key:before {
+  content: "\f084";
+}
+
+.icon-cogs:before {
+  content: "\f085";
+}
+
+.icon-comments:before {
+  content: "\f086";
+}
+
+.icon-thumbs-up:before {
+  content: "\f087";
+}
+
+.icon-thumbs-down:before {
+  content: "\f088";
+}
+
+.icon-star-half:before {
+  content: "\f089";
+}
+
+.icon-heart-empty:before {
+  content: "\f08a";
+}
+
+.icon-signout:before {
+  content: "\f08b";
+}
+
+.icon-linkedin-sign:before {
+  content: "\f08c";
+}
+
+.icon-pushpin:before {
+  content: "\f08d";
+}
+
+.icon-external-link:before {
+  content: "\f08e";
+}
+
+.icon-signin:before {
+  content: "\f090";
+}
+
+.icon-trophy:before {
+  content: "\f091";
+}
+
+.icon-github-sign:before {
+  content: "\f092";
+}
+
+.icon-upload-alt:before {
+  content: "\f093";
+}
+
+.icon-lemon:before {
+  content: "\f094";
+}
+
+.icon-phone:before {
+  content: "\f095";
+}
+
+.icon-check-empty:before {
+  content: "\f096";
+}
+
+.icon-bookmark-empty:before {
+  content: "\f097";
+}
+
+.icon-phone-sign:before {
+  content: "\f098";
+}
+
+.icon-twitter:before {
+  content: "\f099";
+}
+
+.icon-facebook:before {
+  content: "\f09a";
+}
+
+.icon-github:before {
+  content: "\f09b";
+}
+
+.icon-unlock:before {
+  content: "\f09c";
+}
+
+.icon-credit-card:before {
+  content: "\f09d";
+}
+
+.icon-rss:before {
+  content: "\f09e";
+}
+
+.icon-hdd:before {
+  content: "\f0a0";
+}
+
+.icon-bullhorn:before {
+  content: "\f0a1";
+}
+
+.icon-bell:before {
+  content: "\f0a2";
+}
+
+.icon-certificate:before {
+  content: "\f0a3";
+}
+
+.icon-hand-right:before {
+  content: "\f0a4";
+}
+
+.icon-hand-left:before {
+  content: "\f0a5";
+}
+
+.icon-hand-up:before {
+  content: "\f0a6";
+}
+
+.icon-hand-down:before {
+  content: "\f0a7";
+}
+
+.icon-circle-arrow-left:before {
+  content: "\f0a8";
+}
+
+.icon-circle-arrow-right:before {
+  content: "\f0a9";
+}
+
+.icon-circle-arrow-up:before {
+  content: "\f0aa";
+}
+
+.icon-circle-arrow-down:before {
+  content: "\f0ab";
+}
+
+.icon-globe:before {
+  content: "\f0ac";
+}
+
+.icon-wrench:before {
+  content: "\f0ad";
+}
+
+.icon-tasks:before {
+  content: "\f0ae";
+}
+
+.icon-filter:before {
+  content: "\f0b0";
+}
+
+.icon-briefcase:before {
+  content: "\f0b1";
+}
+
+.icon-fullscreen:before {
+  content: "\f0b2";
+}
+
+.icon-group:before {
+  content: "\f0c0";
+}
+
+.icon-link:before {
+  content: "\f0c1";
+}
+
+.icon-cloud:before {
+  content: "\f0c2";
+}
+
+.icon-beaker:before {
+  content: "\f0c3";
+}
+
+.icon-cut:before {
+  content: "\f0c4";
+}
+
+.icon-copy:before {
+  content: "\f0c5";
+}
+
+.icon-paper-clip:before {
+  content: "\f0c6";
+}
+
+.icon-save:before {
+  content: "\f0c7";
+}
+
+.icon-sign-blank:before {
+  content: "\f0c8";
+}
+
+.icon-reorder:before {
+  content: "\f0c9";
+}
+
+.icon-list-ul:before {
+  content: "\f0ca";
+}
+
+.icon-list-ol:before {
+  content: "\f0cb";
+}
+
+.icon-strikethrough:before {
+  content: "\f0cc";
+}
+
+.icon-underline:before {
+  content: "\f0cd";
+}
+
+.icon-table:before {
+  content: "\f0ce";
+}
+
+.icon-magic:before {
+  content: "\f0d0";
+}
+
+.icon-truck:before {
+  content: "\f0d1";
+}
+
+.icon-pinterest:before {
+  content: "\f0d2";
+}
+
+.icon-pinterest-sign:before {
+  content: "\f0d3";
+}
+
+.icon-google-plus-sign:before {
+  content: "\f0d4";
+}
+
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+
+.icon-money:before {
+  content: "\f0d6";
+}
+
+.icon-caret-down:before {
+  content: "\f0d7";
+}
+
+.icon-caret-up:before {
+  content: "\f0d8";
+}
+
+.icon-caret-left:before {
+  content: "\f0d9";
+}
+
+.icon-caret-right:before {
+  content: "\f0da";
+}
+
+.icon-columns:before {
+  content: "\f0db";
+}
+
+.icon-sort:before {
+  content: "\f0dc";
+}
+
+.icon-sort-down:before {
+  content: "\f0dd";
+}
+
+.icon-sort-up:before {
+  content: "\f0de";
+}
+
+.icon-envelope-alt:before {
+  content: "\f0e0";
+}
+
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+
+.icon-undo:before {
+  content: "\f0e2";
+}
+
+.icon-legal:before {
+  content: "\f0e3";
+}
+
+.icon-dashboard:before {
+  content: "\f0e4";
+}
+
+.icon-comment-alt:before {
+  content: "\f0e5";
+}
+
+.icon-comments-alt:before {
+  content: "\f0e6";
+}
+
+.icon-bolt:before {
+  content: "\f0e7";
+}
+
+.icon-sitemap:before {
+  content: "\f0e8";
+}
+
+.icon-umbrella:before {
+  content: "\f0e9";
+}
+
+.icon-paste:before {
+  content: "\f0ea";
+}
+
+.icon-user-md:before {
+  content: "\f200";
+}
+
+/*  Font Awesome
+ *    the iconic font designed for use with Twitter Bootstrap
+ *    -------------------------------------------------------
+ *    The full suite of pictographic icons, examples, and documentation
+ *    can be found at: http://fortawesome.github.com/Font-Awesome/
+ *
+ *    License
+ *    -------------------------------------------------------
+ *    The Font Awesome webfont, CSS, and LESS files are licensed under CC BY 3.0:
+ *    http://creativecommons.org/licenses/by/3.0/ A mention of
+ *    'Font Awesome - http://fortawesome.github.com/Font-Awesome' in human-readable
+ *    source code is considered acceptable attribution (most common on the web).
+ *    If human readable source code is not available to the end user, a mention in
+ *    an 'About' or 'Credits' screen is considered acceptable (most common in desktop
+ *    or mobile software).
+ *
+ *    Contact
+ *    -------------------------------------------------------
+ *    Email: dave@davegandy.com
+ *    Twitter: http://twitter.com/fortaweso_me
+ *    Work: Lead Product Designer @ http://kyruus.com */
+@font-face {
+  font-family: "LigatureSymbols";
+  src: url("fonts/LigatureSymbols.eot");
+  src: url("fonts/LigatureSymbols.eot?#iefix") format("eot"), url("fonts/LigatureSymbols.woff") format("woff"), url("fonts/LigatureSymbols.ttf") format("truetype"), url("fonts/LigatureSymbols.svg#LigatureSymbolsRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*+font-face("LigatureSymbols", font-files("#{$LigatureSymbolsPath}.woff", woff, "#{$LigatureSymbolsPath}.ttf", truetype, "#{$LigatureSymbolsPath}.svg#LigatureSymbolsRegular", svg), "#{$LigatureSymbolsPath}.eot", normal, normal) */
+/*  Font Awesome styles
+ *  ------------------------------------------------------- */
+[class^="symbol-"],
+[class*=" symbol-"] {
+  font-family: "LigatureSymbols";
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+[class^="symbol-"]:before,
+[class*=" symbol-"]:before {
+  ont-family: LigatureSymbols;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  ont-family: LigatureSymbols;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  content: attr(title);
+  margin-right: 0.1em;
+  font-size: 130%;
+  font-family: "LigatureSymbols";
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+
+/* makes the font 33% larger relative to the icon container */
+.symbol-large:before {
+  vertical-align: middle;
+  font-size: 4/3em;
+}
+
+.btn [class^="symbol-"],
+.btn [class*=" symbol-"], .nav-tabs [class^="symbol-"], .nav-tabs [class*=" symbol-"] {
+  /* keeps button heights with and without icons the same */
+  line-height: 0.9em;
+  font-family: "LigatureSymbols";
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+.btn [class^="symbol-"]:before,
+.btn [class*=" symbol-"]:before, .nav-tabs [class^="symbol-"]:before, .nav-tabs [class*=" symbol-"]:before {
+  ont-family: LigatureSymbols;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  ont-family: LigatureSymbols;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  content: attr(title);
+  margin-right: 0.1em;
+  font-size: 130%;
+  font-family: "LigatureSymbols";
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+
+li [class^="symbol-"],
+li [class*=" symbol-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+  font-family: "LigatureSymbols";
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+li [class^="symbol-"]:before,
+li [class*=" symbol-"]:before {
+  ont-family: LigatureSymbols;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  ont-family: LigatureSymbols;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  content: attr(title);
+  margin-right: 0.1em;
+  font-size: 130%;
+  font-family: "LigatureSymbols";
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+li .symbol-large:before,
+li .symbol-large:before {
+  /* 1.5 increased font size for symbol-large * 1.25 width */
+  width: 1.875em;
+  font-family: "LigatureSymbols";
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+li .symbol-large:before:before,
+li .symbol-large:before:before {
+  ont-family: LigatureSymbols;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  ont-family: LigatureSymbols;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  content: attr(title);
+  margin-right: 0.1em;
+  font-size: 130%;
+  font-family: "LigatureSymbols";
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+
+ul.icons {
+  list-style-type: none;
+  margin-left: 2em;
+  text-indent: -0.8em;
+}
+ul.icons li [class^="symbol-"],
+ul.icons li [class*=" symbol-"] {
+  width: 0.8em;
+}
+ul.icons li .symbol-large:before,
+ul.icons li .symbol-large:before {
+  /* 1.5 increased font size for symbol-large * 1.25 width */
+  vertical-align: initial;
+  font-family: "LigatureSymbols";
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+ul.icons li .symbol-large:before:before,
+ul.icons li .symbol-large:before:before {
+  ont-family: LigatureSymbols;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  ont-family: LigatureSymbols;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  content: attr(title);
+  margin-right: 0.1em;
+  font-size: 130%;
+  font-family: "LigatureSymbols";
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+
+/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+ *  readers do not read off random characters that represent icons */
+.symbol-file:before {
+  content: "file";
+}
+
+.symbol-list:before {
+  content: "list";
+}
+
+.symbol-print:before {
+  content: "print";
+}
+
+.symbol-tile:before {
+  content: "tile";
+}
+
+.symbol-delete:before {
+  content: "delete";
+}
+
+.symbol-table:before {
+  content: "table";
+}
+
+.symbol-clear:before {
+  content: "clear";
+}
+
+.symbol-user:before {
+  content: "\f007";
+}
+
+.symbol-copy:before {
+  content: "copy";
+}
+
+.symbol-save:before {
+  content: "save";
+}
+
+.symbol-cut:before {
+  content: "cut";
+}
+
+.symbol-upload:before {
+  content: "upload";
+}
+
+.symbol-backspace:before {
+  content: "backspace";
+}
+
+.symbol-cloud:before {
+  content: "cloud";
+}
+
+.symbol-alignleft:before {
+  content: "alignleft";
+}
+
+.symbol-folder:before {
+  content: "folder";
+}
+
+.symbol-aligncenter:before {
+  content: "aligncenter";
+}
+
+.symbol-camera:before {
+  content: "camera";
+}
+
+.symbol-alignright:before {
+  content: "alignright";
+}
+
+.symbol-trash:before {
+  content: "\f014";
+}
+
+.symbol-photo:before {
+  content: "photo";
+}
+
+.symbol-alignadjust:before {
+  content: "alignadjust";
+}
+
+.symbol-image:before {
+  content: "image";
+}
+
+.symbol-italic:before {
+  content: "italic";
+}
+
+.symbol-barcode:before {
+  content: "barcode";
+}
+
+.symbol-bold:before {
+  content: "bold";
+}
+
+.symbol-phone:before {
+  content: "phone";
+}
+
+.symbol-underline:before {
+  content: "underline";
+}
+
+.symbol-music:before {
+  content: "music";
+}
+
+.symbol-code:before {
+  content: "code";
+}
+
+.symbol-video:before {
+  content: "video";
+}
+
+.symbol-link:before {
+  content: "link";
+}
+
+.symbol-playmedia:before {
+  content: "playmedia";
+}
+
+.symbol-quote:before {
+  content: "quote";
+}
+
+.symbol-record:before {
+  content: "record";
+}
+
+.symbol-graph:before {
+  content: "graph";
+}
+
+.symbol-play:before {
+  content: "play";
+}
+
+.symbol-magic:before {
+  content: "magic";
+}
+
+.symbol-brush:before {
+  content: "brush";
+}
+
+.symbol-pause:before {
+  content: "pause";
+}
+
+.symbol-stop:before {
+  content: "stop";
+}
+
+.symbol-color:before {
+  content: "color";
+}
+
+.symbol-eject:before {
+  content: "eject";
+}
+
+.symbol-contrast:before {
+  content: "contrast";
+}
+
+.symbol-bell:before {
+  content: "bell";
+}
+
+.symbol-ink:before {
+  content: "ink";
+}
+
+.symbol-volumeup:before {
+  content: "volumeup";
+}
+
+.symbol-gradation:before {
+  content: "gradation";
+}
+
+.symbol-volumedown:before {
+  content: "volumedown";
+}
+
+.symbol-sepia:before {
+  content: "sepia";
+}
+
+.symbol-volume:before {
+  content: "volume";
+}
+
+.symbol-invert:before {
+  content: "invert";
+}
+
+.symbol-off:before {
+  content: "off";
+}
+
+.symbol-paint:before {
+  content: "paint";
+}
+
+.symbol-light:before {
+  content: "light";
+}
+
+.symbol-paramater:before {
+  content: "paramater";
+}
+
+.symbol-dark:before {
+  content: "dark";
+}
+
+.symbol-crop:before {
+  content: "crop";
+}
+
+.symbol-lock:before {
+  content: "lock";
+}
+
+.symbol-check:before {
+  content: "check";
+}
+
+.symbol-unlock:before {
+  content: "unlock";
+}
+
+.symbol-edit:before {
+  content: "\f044";
+}
+
+.symbol-checkbox:before {
+  content: "checkbox";
+}
+
+.symbol-flag:before {
+  content: "flag";
+}
+
+.symbol-checkboxempty:before {
+  content: "checkboxempty";
+}
+
+.symbol-wifi:before {
+  content: "wifi";
+}
+
+.symbol-pc:before {
+  content: "pc";
+}
+
+.symbol-time:before {
+  content: "time";
+}
+
+.symbol-keyboard:before {
+  content: "keyboard";
+}
+
+.symbol-map:before {
+  content: "map";
+}
+
+.symbol-mobile:before {
+  content: "mobile";
+}
+
+.symbol-geo:before {
+  content: "geo";
+}
+
+.symbol-horizontal:before {
+  content: "horizontal";
+}
+
+.symbol-location:before {
+  content: "location";
+}
+
+.symbol-vertical:before {
+  content: "vertical";
+}
+
+.symbol-pin:before {
+  content: "pin";
+}
+
+.symbol-web:before {
+  content: "web";
+}
+
+.symbol-walking:before {
+  content: "walking";
+}
+
+.symbol-mail:before {
+  content: "mail";
+}
+
+.symbol-bicycle:before {
+  content: "bicycle";
+}
+
+.symbol-ok-sign:before {
+  content: "\f058";
+}
+
+.symbol-shopping:before {
+  content: "shopping";
+}
+
+.symbol-carn:before {
+  content: "car";
+}
+
+.symbol-dashboard:before {
+  content: "dashboard";
+}
+
+.symbol-bus:before {
+  content: "bus";
+}
+
+.symbol-key:before {
+  content: "key";
+}
+
+.symbol-plane:before {
+  content: "plane";
+}
+
+.symbol-sns:before {
+  content: "sns";
+}
+
+.symbol-compass:before {
+  content: "compass";
+}
+
+.symbol-calender:before {
+  content: "calender";
+}
+
+.symbol-arrowup:before {
+  content: "arrowup";
+}
+
+.symbol-ban:before {
+  content: "ban";
+}
+
+.symbol-arrowright:before {
+  content: "arrowright";
+}
+
+.symbol-remove:before {
+  content: "remove";
+}
+
+.symbol-arrowdown:before {
+  content: "arrowdown";
+}
+
+.symbol-pen:before {
+  content: "pen";
+}
+
+.symbol-arrowleft:before {
+  content: "arrowleft";
+}
+
+.symbol-exclamation-sign:before {
+  content: "\f06a";
+}
+
+.symbol-eraser:before {
+  content: "eraser";
+}
+
+.symbol-up:before {
+  content: "up";
+}
+
+.symbol-edit:before {
+  content: "edit";
+}
+
+.symbol-eye-open:before {
+  content: "\f06e";
+}
+
+.symbol-right:before {
+  content: "right";
+}
+
+.symbol-tabs:before {
+  content: "tabs";
+}
+
+.symbol-down:before {
+  content: "down";
+}
+
+.symbol-tag:before {
+  content: "tag";
+}
+
+.symbol-left:before {
+  content: "left";
+}
+
+.symbol-setup:before {
+  content: "setup";
+}
+
+.symbol-back:before {
+  content: "back";
+}
+
+.symbol-chevron-up:before {
+  content: "\f077";
+}
+
+.symbol-setting:before {
+  content: "setting";
+}
+
+.symbol-next:before {
+  content: "next";
+}
+
+.symbol-etc:before {
+  content: "etc";
+}
+
+.symbol-dropdown:before {
+  content: "dropdown";
+}
+
+.symbol-clip:before {
+  content: "clip";
+}
+
+.symbol-sort:before {
+  content: "sort";
+}
+
+.symbol-bookmark:before {
+  content: "bookmark";
+}
+
+.symbol-good:before {
+  content: "good";
+}
+
+.symbol-book:before {
+  content: "book";
+}
+
+.symbol-facebook-sign:before {
+  content: "\f082";
+}
+
+.symbol-bad:before {
+  content: "bad";
+}
+
+.symbol-album:before {
+  content: "album";
+}
+
+.symbol-bad:before {
+  content: "bad";
+}
+
+.symbol-album:before {
+  content: "album";
+}
+
+.symbol-full:before {
+  content: "full";
+}
+
+.symbol-user:before {
+  content: "user";
+}
+
+.symbol-small:before {
+  content: "small";
+}
+
+.symbol-friend:before {
+  content: "friend";
+}
+
+.symbol-move:before {
+  content: "move";
+}
+
+.symbol-group:before {
+  content: "group";
+}
+
+.symbol-undo:before {
+  content: "undo";
+}
+
+.symbol-frustrate:before {
+  content: "frustrate";
+}
+
+.symbol-forward:before {
+  content: "forward";
+}
+
+.symbol-laugh:before {
+  content: "laugh";
+}
+
+.symbol-reply:before {
+  content: "reply";
+}
+
+.symbol-wink:before {
+  content: "wink";
+}
+
+.symbol-share:before {
+  content: "share";
+}
+
+.symbol-smile:before {
+  content: "smile";
+}
+
+.symbol-login:before {
+  content: "login";
+}
+
+.symbol-surprise:before {
+  content: "surprise";
+}
+
+.symbol-logout:before {
+  content: "logout";
+}
+
+.symbol-trouble:before {
+  content: "trouble";
+}
+
+.symbol-exchange:before {
+  content: "exchange";
+}
+
+.symbol-game:before {
+  content: "game";
+}
+
+.symbol-shuffle:before {
+  content: "shuffle";
+}
+
+.symbol-globe:before {
+  content: "globe";
+}
+
+.symbol-repeat:before {
+  content: "repeat";
+}
+
+.symbol-home:before {
+  content: "home";
+}
+
+.symbol-refresh:before {
+  content: "refresh";
+}
+
+.symbol-building:before {
+  content: "building";
+}
+
+.symbol-sync:before {
+  content: "sync";
+}
+
+.symbol-rss:before {
+  content: "rss";
+}
+
+.symbol-external:before {
+  content: "external";
+}
+
+.symbol-app:before {
+  content: "app";
+}
+
+.symbol-addstar:before {
+  content: "addstar";
+}
+
+.symbol-memo:before {
+  content: "memo";
+}
+
+.symbol-star:before {
+  content: "star";
+}
+
+.symbol-meal:before {
+  content: "meal";
+}
+
+.symbol-starempty:before {
+  content: "starempty";
+}
+
+.symbol-feed:before {
+  content: "feed";
+}
+
+.symbol-coffee:before {
+  content: "coffee";
+}
+
+.symbol-heart:before {
+  content: "heart";
+}
+
+.symbol-present:before {
+  content: "present";
+}
+
+.symbol-heartempty:before {
+  content: "heartempty";
+}
+
+.symbol-twinkle:before {
+  content: "twinkle";
+}
+
+.symbol-view:before {
+  content: "view";
+}
+
+.symbol-crown:before {
+  content: "crown";
+}
+
+.symbol-comment:before {
+  content: "comment";
+}
+
+.symbol-category:before {
+  content: "category";
+}
+
+.symbol-comments:before {
+  content: "comments";
+}
+
+.symbol-circle:before {
+  content: "circle";
+}
+
+.symbol-plus:before {
+  content: "plus";
+}
+
+.symbol-info:before {
+  content: "info";
+}
+
+.symbol-minus:before {
+  content: "minus";
+}
+
+.symbol-help:before {
+  content: "help";
+}
+
+.symbol-zoomin:before {
+  content: "zoomin";
+}
+
+.symbol-refreshbutton:before {
+  content: "refreshbutton";
+}
+
+.symbol-zoomout:before {
+  content: "zoomout";
+}
+
+.symbol-tilemenu:before {
+  content: "tilemenu";
+}
+
+.symbol-notify:before {
+  content: "notify";
+}
+
+.symbol-apple:before {
+  content: "apple";
+}
+
+.symbol-evernote:before {
+  content: "evernote";
+}
+
+.symbol-android:before {
+  content: "android";
+}
+
+.symbol-github:before {
+  content: "github";
+}
+
+.symbol-windows:before {
+  content: "windows";
+}
+
+.symbol-dribbble:before {
+  content: "dribbble";
+}
+
+.symbol-amazon:before {
+  content: "amazon";
+}
+
+.symbol-cookpad:before {
+  content: "cookpad";
+}
+
+.symbol-facebook:before {
+  content: "facebook";
+}
+
+.symbol-instapaper:before {
+  content: "instapaper";
+}
+
+.symbol-twitter:before {
+  content: "twitter";
+}
+
+.symbol-readability:before {
+  content: "readability";
+}
+
+.symbol-google:before {
+  content: "google";
+}
+
+.symbol-picasa:before {
+  content: "picasa";
+}
+
+.symbol-hatena:before {
+  content: "hatena";
+}
+
+.symbol-delicious:before {
+  content: "delicious";
+}
+
+.symbol-linkedin:before {
+  content: "linkedin";
+}
+
+.symbol-youtube:before {
+  content: "youtube";
+}
+
+.symbol-mixi:before {
+  content: "mixi";
+}
+
+.symbol-chrome:before {
+  content: "chrome";
+}
+
+.symbol-skype:before {
+  content: "skype";
+}
+
+.symbol-safari:before {
+  content: "safari";
+}
+
+.symbol-forsquare:before {
+  content: "forsquare";
+}
+
+.symbol-sleipnir:before {
+  content: "sleipnir";
+}
+
+.symbol-pinterest:before {
+  content: "pinterest";
+}
+
+.symbol-firefox:before {
+  content: "firefox";
+}
+
+.symbol-flickr:before {
+  content: "flickr";
+}
+
+.symbol-opera:before {
+  content: "opera";
+}
+
+.symbol-tumblr:before {
+  content: "tumblr";
+}
+
+.symbol-internetexplorer:before {
+  content: "internetexplorer";
+}
+
+#main-nav-holder {
+  height: 60px;
+  overflow: hidden;
+}
+
+#main-nav {
+  background: #343430;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 3px 6px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 3px 6px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.4) 0 3px 6px 0;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 3px 6px 0;
+  z-index: 1000;
+}
+#main-nav ul {
+  margin: 0 auto 30px auto;
+  height: 60px;
+  text-align: center;
+  font-size: 14px;
+  width: 960px;
+  color: #dddddd;
+  display: block;
+  overflow: hidden;
+  *zoom: 1;
+  position: relative;
+}
+#main-nav li {
+  display: block;
+  border-left: 1px solid #484844;
+  float: left;
+  height: 60px;
+  overflow: hidden;
+  *zoom: 1;
+  vertical-align: middle !important;
+}
+#main-nav li:first-child {
+  border-left: 0;
+}
+#main-nav li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  line-height: 24px;
+  height: 24px;
+  padding: 18px;
+  margin: 0;
+  font-size: 108%;
+  vertical-align: middle !important;
+}
+#main-nav li a img {
+  width: auto;
+  height: 24px;
+  float: left;
+  margin: 0 6px 0 0;
+}
+#main-nav li a:hover {
+  background: #5c5c58;
+}
+
+.sticky #main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.sticky #main-nav ul {
+  margin: 0 auto;
+}
+
+.top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  width: 150px;
+  padding: 12px;
+  line-height: 18px;
+  background: #333333;
+  color: #888888;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  behavior: url(../PIE.htc);
+}
+.top:hover {
+  color: #eeeeee;
+}
+.top:hover:before {
+  border-bottom-color: #eeeeee;
+}
+
+.opacity .top {
+  opacity: 1;
+  -webkit-transition: opacity 700ms linear;
+  -moz-transition: opacity 700ms linear;
+  transition: opacity 700ms linear;
+}
+.opacity .top.hidden {
+  opacity: 0;
+}
+
+.no-opacity .top.hidden {
+  display: none;
+}
+
+a {
+  color: #3366cc;
+  text-decoration: none;
+}
+a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+a:focus, a:active {
+  outline: none;
+}
+
+body {
+  background: url(/images/html.gif) #eaebe6;
+  color: #0d0d0d;
+}
+
+.inner {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.link_to_youroom a {
+  font-size: 14px;
+  padding: 0.3em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1.5;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #a0ac62;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a0ac62), color-stop(100%, #848f4c));
+  background: -webkit-linear-gradient(#a0ac62, #848f4c);
+  background: -moz-linear-gradient(#a0ac62, #848f4c);
+  background: -o-linear-gradient(#a0ac62, #848f4c);
+  background: -ms-linear-gradient(#a0ac62, #848f4c);
+  background: linear-gradient(#a0ac62, #848f4c);
+  -moz-box-shadow: #bec694 0 1px 0 inset;
+  -webkit-box-shadow: #bec694 0 1px 0 inset;
+  -o-box-shadow: #bec694 0 1px 0 inset;
+  box-shadow: #bec694 0 1px 0 inset;
+  border: 1px solid #757f43;
+  color: white;
+  text-shadow: #535a30 0 -1px 0;
+  font-weight: bold;
+}
+.link_to_youroom a:hover {
+  background-color: #757f43;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #94a055), color-stop(100%, #757f43));
+  background: -webkit-linear-gradient(#94a055, #757f43);
+  background: -moz-linear-gradient(#94a055, #757f43);
+  background: -o-linear-gradient(#94a055, #757f43);
+  background: -ms-linear-gradient(#94a055, #757f43);
+  background: linear-gradient(#94a055, #757f43);
+}
+.link_to_youroom a:active {
+  -moz-box-shadow: #6c753e 0 1px 2px inset;
+  -webkit-box-shadow: #6c753e 0 1px 2px inset;
+  -o-box-shadow: #6c753e 0 1px 2px inset;
+  box-shadow: #6c753e 0 1px 2px inset;
+}
+
+#header {
+  padding: 30px 0 0 0;
+}
+#header hgroup {
+  margin: 0 0 30px 0;
+  position: relative;
+  overflow: hidden;
+  *zoom: 1;
+}
+#header hgroup h1 img {
+  margin: 0 auto 10px auto;
+  display: block;
+}
+#header hgroup h2 {
+  text-align: center;
+  font-size: 138.5%;
+}
+#header hgroup .youroom_link {
+  position: absolute;
+  right: 0;
+  top: 34px;
+}
+#header hgroup .youroom_link a {
+  text-decoration: none;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 12px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+
+section.about {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 30px 0;
+}
+section.about h1 {
+  font-size: 153.9%;
+  font-weight: bold;
+  margin: 0 0 12px 0;
+  color: #343430;
+}
+section.about h1 i {
+  margin: 0 4px 0 0;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  color: #c8d48a;
+}
+section.about h1 i {
+  *display: inline;
+}
+section.about .cases {
+  padding: 10px 18px 14px 18px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  clear: both;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+}
+section.about .cases h2 {
+  font-size: 167%;
+  margin: 0 0 6px 0;
+}
+section.about .cases h3 {
+  font-size: 167%;
+  margin: 0 0 6px 0;
+}
+section.about .cases ul li {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  margin: 0 20px 0 0;
+  font-size: 108%;
+}
+section.about .cases ul li {
+  *display: inline;
+}
+section.about .description {
+  float: right;
+  width: 680px;
+}
+section.about .description h2 {
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+  font-weight: bold;
+  font-size: 167%;
+}
+section.about .description p {
+  line-height: 1.7;
+  color: #52524e;
+  font-size: 116%;
+}
+section.about ul li {
+  overflow: hidden;
+  *zoom: 1;
+  display: block;
+  margin: 0 0 20px 0;
+}
+section.about ul li div.image {
+  margin: 0 20px 12px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 2px 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 2px 10px;
+  -o-box-shadow: rgba(0, 0, 0, 0.4) 0 2px 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 10px;
+  display: block;
+  float: left;
+  overflow: hidden;
+  *zoom: 1;
+}
+section.about ul li div.image img {
+  width: 300px;
+  height: 200px;
+}
+section.about ul li .description {
+  float: right;
+  width: 620px;
+}
+section.about ul li .description h2 {
+  font-size: 167%;
+}
+section.about ul li .description p {
+  line-height: 1.7;
+}
+section.about ul li .description ul {
+  list-style-type: circle;
+}
+section.about ul li .description ul li {
+  margin: 0 0 0 0;
+  color: #52524e;
+}
+
+section.howto {
+  overflow: hidden;
+  *zoom: 1;
+  clear: both;
+  background: rgba(50, 50, 50, 0.1);
+  padding: 30px 0;
+  border-top: 1px rgba(0, 0, 0, 0.1) dotted;
+  border-bottom: 5px rgba(0, 0, 0, 0.1) solid;
+}
+section.howto h2 {
+  text-align: center;
+  margin: 0 0 40px 0;
+  text-shadow: rgba(255, 255, 255, 0.2) 0 1px 0;
+  font-size: 182%;
+  font-weight: bold;
+}
+section.howto ol li {
+  width: 310px;
+  float: left;
+}
+section.howto ol li .number {
+  background: #343430;
+  display: block;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
+  position: absolute;
+  color: white;
+  z-index: 2;
+  font-size: 153.9%;
+}
+section.howto ol li .image {
+  margin: 20px 0 12px 20px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 2px 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 2px 10px;
+  -o-box-shadow: rgba(0, 0, 0, 0.4) 0 2px 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 10px;
+  display: block;
+  overflow: hidden;
+  *zoom: 1;
+}
+section.howto ol li .image img {
+  width: 290px;
+  height: 200px;
+  background: white;
+}
+section.howto ol li .text {
+  padding: 0 0 0 22px;
+  line-height: 1.5;
+}
+section.howto ol li:nth-child(2) {
+  padding: 0 10px;
+}
+
+#youroomassistant {
+  overflow: hidden;
+  *zoom: 1;
+}
+#youroomassistant .about {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 0 0 40px 0;
+}
+#youroomassistant .about .description {
+  float: right;
+  width: 540px;
+}
+#youroomassistant .about .description h1 {
+  font-size: 197%;
+  font-weight: normal;
+  line-height: 1.5;
+}
+#youroomassistant .about .description p {
+  margin: 0 0 0.8em 0;
+  line-height: 1.5;
+}
+#youroomassistant .about .description ul.function {
+  padding: 10px 0 0 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+#youroomassistant .about .description ul.function li {
+  line-height: 1.5;
+  height: 128px;
+  width: 240px;
+  padding: 14px 12px 0 12px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+#youroomassistant .about .description ul.function li p {
+  font-size: 93%;
+}
+#youroomassistant .about .description ul.function li p.image img {
+  display: block;
+  margin: 0 auto 14px auto;
+}
+#youroomassistant .about .description ul.function li.function_1 {
+  float: left;
+  background: rgba(0, 172, 237, 0.2);
+}
+#youroomassistant .about .description ul.function li.function_2 {
+  float: right;
+  background: rgba(244, 191, 123, 0.4);
+}
+#youroomassistant .about .illust {
+  float: left;
+  width: 400px;
+  background: url(/images/eyecatch.png) no-repeat;
+  height: 314px;
+}
+#youroomassistant .howto h2 {
+  font-size: 34px;
+  margin: 0 0 30px 0;
+  line-height: 100px;
+  padding: 0 0 0 90px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 80px auto;
+}
+
+#twitter {
+  overflow: hidden;
+  *zoom: 1;
+  background: rgba(0, 172, 237, 0.2);
+}
+#twitter .about h1 {
+  font-size: 34px;
+  margin: 0 0 30px 0;
+  line-height: 100px;
+  padding: 0 0 0 90px;
+  background-image: url(/images/twitter_title.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 80px auto;
+}
+
+#pivotal_tracker {
+  overflow: hidden;
+  *zoom: 1;
+  background: rgba(37, 97, 136, 0.1);
+}
+#pivotal_tracker .about h1 {
+  font-size: 34px;
+  margin: 0 0 30px 0;
+  line-height: 100px;
+  padding: 0 0 0 90px;
+  background-image: url(/images/pivotal_tracker_title.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 80px auto;
+}
+
+#reminder {
+  overflow: hidden;
+  *zoom: 1;
+  background: rgba(241, 241, 37, 0.1);
+}
+#reminder .about h1 {
+  font-size: 34px;
+  margin: 0 0 30px 0;
+  line-height: 100px;
+  padding: 0 0 0 90px;
+  background-image: url(/images/alert_title.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 80px auto;
+}
+
+#footer #page-top {
+  position: fixed;
+  right: 20px;
+}
+#footer #page-top .page-top a {
+  display: block;
+  width: 150px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -o-border-top-left-radius: 4px;
+  -ms-border-top-left-radius: 4px;
+  -khtml-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -o-border-top-right-radius: 4px;
+  -ms-border-top-right-radius: 4px;
+  -khtml-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  line-height: 40px;
+  text-align: left;
+  color: white;
+  clear: both;
+  overflow: hidden;
+  *zoom: 1;
+}
+#footer #page-top .page-top a:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+#footer #page-top .page-top a i {
+  font-size: 167%;
+  margin: 0 6px 0 0;
+  float: left;
+  width: 40px;
+  text-align: center;
+}
+#footer #page-top .page-top a span {
+  display: block;
+  float: left;
+}
+#footer #page-top .to_youroom a {
+  display: block;
+  width: 150px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -o-border-bottom-left-radius: 4px;
+  -ms-border-bottom-left-radius: 4px;
+  -khtml-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -o-border-bottom-right-radius: 4px;
+  -ms-border-bottom-right-radius: 4px;
+  -khtml-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  line-height: 40px;
+  border-top: dotted 1px #cccccc;
+  text-align: center;
+  color: white;
+  clear: both;
+  overflow: hidden;
+  *zoom: 1;
+}
+#footer #page-top .to_youroom a:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+#footer #page-top .to_youroom a i {
+  font-size: 167%;
+  float: left;
+  width: 40px;
+  text-align: center;
+}
+#footer #page-top .to_youroom a i img {
+  width: 20px;
+}
+#footer #page-top .to_youroom a span {
+  display: block;
+  float: left;
+}

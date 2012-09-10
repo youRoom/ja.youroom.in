@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang='ja' xml:lang='ja' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta content='ja' name='lang'>
+    <title>youRoomAssistantについて</title>
+    <link href='stylesheets/application.css' media='screen' rel='stylesheet' type='text/css'>
+    <script src='http://code.jquery.com/jquery-1.5.min.js' type='text/javascript'></script>
+    <script src='javascripts/modernizr.custom.js' type='text/javascript'></script>
+    <script src='javascripts/smoothscroll.js' type='text/javascript'></script>
+    <script src='javascripts/waypoints.min.js' type='text/javascript'></script>
+    <script src='javascripts/application.js' type='text/javascript'></script>
+    <script>
+      //<![CDATA[
+        $(document).ready(function() {
+        	$('.top').addClass('hidden');
+        	$.waypoints.settings.scrollThrottle = 30;
+        	$('#wrapper').waypoint(function(event, direction) {//here you are setting the main div #wrapper in this case
+        		$('.top').toggleClass('hidden', direction === "up");
+        	}, {
+        		offset: '-100%'
+        	}).find('#main-nav-holder').waypoint(function(event, direction) {//here you are setting the sticky DIV
+        		$(this).parent().toggleClass('sticky', direction === "down");
+        		event.stopPropagation();
+        	});
+        	
+        	$('#wrapper').waypoint(function(event, direction) {//here you are setting the main div #wrapper in this case
+        		$('.top').toggleClass('hidden', direction === "up");
+        	}, {
+        		offset: '-100%'
+        	}).find('#sidebar').waypoint(function(event, direction) {//here you are setting the sticky DIV
+        		$(this).parent().toggleClass('sticky', direction === "down");
+        		event.stopPropagation();
+        	});
+        });
+      //]]>
+    </script>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id='wrapper'>
+      <script>
+        //<![CDATA[
+          $(function() {
+              
+            var showFlug = false;
+            var topBtn = $('#page-top');   
+            topBtn.css('bottom', '-100px');
+            var showFlug = false;
+            //スクロールが100に達したらボタン表示
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    if (showFlug == false) {
+                        showFlug = true;
+                        topBtn.stop().animate({'bottom' : '20px'}, 200);
+                    }
+                } else {
+                    if (showFlug) {
+                        showFlug = false;
+                        topBtn.stop().animate({'bottom' : '-100px'}, 200);
+                    }
+                }
+            });
+          });
+        //]]>
+      </script>
+      <header id='header'>
+        <div class='inner'>
+          <hgroup>
+            <h1>
+              <img height='65' src='images/logo_h1.png' width='600'>
+            </h1>
+            <p class='youroom_link'>
+              <a href='https://www.youroom.in/'>
+                youRoomにもどる
+              </a>
+            </p>
+          </hgroup>
+        </div>
+      </header>
+      <div id='youroomassistant'>
+        <section class='about'>
+          <div class='inner'>
+            <div class='description'>
+              <h1>
+                youRoomにおけるチーム活動を支援する
+                <br>
+                優秀なアシスタント機能
+              </h1>
+              <p>
+                チームやプロジェクトでの活動において、煩雑な仕事や誰にでもできる仕事はすべてコンピュータにやらせるべき。そこで、チーム内の仮想アシスタントとして面倒な仕事を処理してくれるのがyouRoomアシスタントです。
+              </p>
+              <ul class='function'>
+                <li class='function_1'>
+                  <p class='image'>
+                    <img height='48' src='images/function_1.png' width='195'>
+                  </p>
+                  <p>
+                    リマインダー機能、Twitterのつぶやき取得機能など、youRoomをより便利に使うための機能を備えています。
+                  </p>
+                </li>
+                <li class='function_2'>
+                  <p class='image'>
+                    <img height='45' src='images/function_2.png' width='195'>
+                  </p>
+                  <p>
+                    youRoomアシスタントの機能はいずれも無料で提供されます。設定も簡単。
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class='illust'></div>
+          </div>
+        </section>
+      </div>
+      <div id='main-nav-holder'>
+        <nav id='main-nav'>
+          <ul>
+            <li class='youroomassistant'>
+              <a href='#getting_started'>
+                <img src='images/logo.png'>
+                はじめかた
+              </a>
+            </li>
+            <li class='reminder'>
+              <a href='#reminder'>
+                <img src='images/alert.png'>
+                リマインダー
+              </a>
+            </li>
+            <li class='twitter'>
+              <a href='#twitter'>
+                <img src='images/twitter.png'>
+                Twitter取り込み
+              </a>
+            </li>
+            <li class='pivotaltracker'>
+              <a href='#pivotal_tracker'>
+                <img src='images/pivotal_tracker.png'>
+                Pivotal Trackerとの相互連携
+              </a>
+            </li>
+            <li>
+              <a href='https://www.youroom.in/'>
+                <img src='images/youroom.png'>
+                youRoomにもどる
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <section class='howto' id='getting_started'>
+        <div class='inner'>
+          <h2>
+            <i class='icon-wrench'></i>
+            youRoomアシスタントのはじめかた
+          </h2>
+          <ol>
+            <li>
+              <h4 class='number'>1</h4>
+              <p class='image'>
+                <img src='images/howto_01.png'>
+              </p>
+              <p class='text'>
+                youRoomのアシスタント管理画面を開きます。
+                <br>
+                (管理者権限のあるルーム > ルーム管理 > アシスタント)
+              </p>
+            </li>
+            <li>
+              <h4 class='number'>2</h4>
+              <p class='image'>
+                <img src='images/howto_02.png'>
+              </p>
+              <p class='text'>
+                「アシスタントの利用を開始する」ボタンをクリックします。
+              </p>
+            </li>
+            <li>
+              <h4 class='number'>3</h4>
+              <p class='image'>
+                <img src='images/howto_03.png'>
+              </p>
+              <p class='text'>
+                各機能の設定は上記のリンクをクリックしてください。設定用の外部サイトが開きます。
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <div id='reminder'>
+        <section class='about'>
+          <div class='inner'>
+            <h1>リマインダー</h1>
+            <ul>
+              <li>
+                <div class='image'>
+                  <img src='images/reminder_about_01.png'>
+                </div>
+                <div class='description'>
+                  <h2>忘れがちな毎月のタスクをアシスタントがお知らせ！</h2>
+                  <p>毎月の決まった作業を忘れずにするのは大変です。それをチームで共有するとなれば、なおさら大変です。</p>
+                  <p>youRoomアシスタントのリマインダー機能を使えば、毎月の決まった日に予め登録しておいたメッセージがyouRoomに書き込まれます。</p>
+                </div>
+              </li>
+              <li>
+                <div class='image'>
+                  <img src='images/reminder_about_02.png'>
+                </div>
+                <div class='description'>
+                  <h2>タスクの進捗も可視化されます</h2>
+                  <p>チームのメンバーは定期的に発信されるアシスタントのメッセージをトリガーにして、作業に取りかかることができます。普段からyouRoomを活用しているチームであれば、自然にメッセージを受け取れるはずです。youRoomはタスクを管理するツールとしても優れているため、リマインダー機能とは大変相性が良いのです。</p>
+                </div>
+              </li>
+            </ul>
+            <div class='cases'>
+              <h2>こんなケースで使えます</h2>
+              <ul>
+                <li>
+                  <i class='icon-caret-right'></i>
+                  毎月の請求書の発行を忘れないようにする
+                </li>
+                <li>
+                  <i class='icon-caret-right'></i>
+                  毎月の経費の入力を忘れないように全員に指示する
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class='howto'>
+          <div class='inner'>
+            <h2>
+              <i class='icon-wrench'></i>
+              リマインダーの設定方法
+            </h2>
+            <ol>
+              <li>
+                <h4 class='number'>1</h4>
+                <div class='image'>
+                  <img src='images/reminder_howto_01.png'>
+                </div>
+                <p class='text'>
+                  アシスタントのルーム設定画面にある「リマインダーを作成する」リンクをクリックします。
+                </p>
+              </li>
+              <li>
+                <h4 class='number'>2</h4>
+                <div class='image'>
+                  <img src='images/reminder_howto_02.png'>
+                </div>
+                <p class='text'>
+                  スケジュールとメッセージを入力します。
+                </p>
+              </li>
+              <li>
+                <h4 class='number'>3</h4>
+                <div class='image'>
+                  <img src='images/reminder_howto_03.png'>
+                </div>
+                <p class='text'>
+                  「登録する」ボタンをクリックすれば設定完了です。以降はスケジュールに設定された日になるとメッセージがyouRoomに投稿されます。
+                </p>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </div>
+      <div id='twitter'>
+        <section class='about'>
+          <div class='inner'>
+            <h1>
+              Twitter取り込み
+            </h1>
+            <ul>
+              <li>
+                <div class='image'>
+                  <img src='images/twitter_about_01.png'>
+                </div>
+                <div class='description'>
+                  <h2>Twitter上のつぶやきを収集してチームで共有しましょう</h2>
+                  <p>自分たちの作品やサービスに関するTwitter上のつぶやきは、当然誰でも気になりますよね。</p>
+                  <p>youRoomアシスタントのTwitter取り込み機能を使えば、設定されたキーワードに関するつぶやきを一定時間おきに取得して、youRoomに書き込んでくれます。</p>
+                  <p>youRoomのルーム内に書き込まれたつぶやきはチーム内で共有することができます。着目すべきつぶやきがあれば、そこへコメントをつけることもできるので、youRoomをユーザサポートに活かすこともできます。</p>
+                </div>
+              </li>
+            </ul>
+            <div class='cases'>
+              <h2>こんなケースで使えます</h2>
+              <ul>
+                <li>
+                  <i class='icon-caret-right'></i>
+                  自社製品の口コミの様子をチームで共有したい
+                </li>
+                <li>
+                  <i class='icon-caret-right'></i>
+                  ハッシュタグでイベント時のつぶやきを集めたい
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class='howto'>
+          <div class='inner'>
+            <h2>
+              <i class='icon-wrench'></i>
+              Twitter取り込みの設定方法
+            </h2>
+            <ol>
+              <li>
+                <h4 class='number'>1</h4>
+                <div class='image'>
+                  <img src='images/twitter_howto_01.png'>
+                </div>
+                <p class='text'>
+                  「Twitterで認証する」ボタンをクリックして、Twitter認証を行います。(初回のみ)
+                </p>
+              </li>
+              <li>
+                <h4 class='number'>2</h4>
+                <div class='image'>
+                  <img src='images/twitter_howto_02.png'>
+                </div>
+                <p class='text'>
+                  Twitterから取り込みたいキーワードを指定します。特定のキーワードを除外する場合は除外キーワードを入力してください。複数ある場合はカンマ(,)で区切ります。
+                </p>
+              </li>
+              <li>
+                <h4 class='number'>3</h4>
+                <div class='image'>
+                  <img src='images/twitter_howto_03.png'>
+                </div>
+                <p class='text'>
+                  「登録する」ボタンをクリックすると設定完了です。以降は定期的に条件に合致するツイートがyouRoomに取り込まれます。
+                </p>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </div>
+      <div id='pivotal_tracker'>
+        <section class='about'>
+          <div class='inner'>
+            <h1>Pivotal Trackerとの相互連携</h1>
+            <ul>
+              <li>
+                <div class='image'>
+                  <img src='images/pivotal_about_01.png'>
+                </div>
+                <div class='description'>
+                  <h2>Pivotal TrackerとyouRoomを連携させて、さらにアジャイルなソフトウェア開発を</h2>
+                  <p>アジャイルにソフトウェア開発をするチームなら、youRoomをきっとうまく活用できます。</p>
+                  <p>また、Pivotal Trackerはアジャイル開発に最適な要件管理ツールです。</p>
+                  <p>youRoomアシスタントを利用してこの二つのツールを連携させれば、アジャイルなソフトウェア開発をさらに加速させることができます。</p>
+                </div>
+              </li>
+              <li>
+                <div class='image'>
+                  <img src='images/pivotal_about_02.png'>
+                </div>
+                <div class='description'>
+                  <h2>youRoom上での議論を即座にチケット化</h2>
+                  <p>youRoom上で議論した内容をPivotal Trackerのチケットとして登録したい場合、Pivotal Trackerに同じ情報を書き込むのはDRYではありません。</p>
+                  <p>youRoomアシスタントを導入すれば、特定の書式を持ったコメントからPivotal Trackerのチケットが自動的に作成されます。</p>
+                  <p>また、チケットのDescriptionにはyouRoomのURLも記入されます。</p>
+                </div>
+              </li>
+              <li>
+                <div class='image'>
+                  <img src='images/pivotal_about_03.png'>
+                </div>
+                <div class='description'>
+                  <h2>開発の進捗をyouRoom上でキャッチ！</h2>
+                  <p>Pivotal Trackerのチケットが次のステータスに進むとyouRoom上に通知されます。わざわざPivotal Trackerに見に行かなくても、youRoomを確認するだけで開発の進捗を把握することができます。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class='howto'>
+          <div class='inner'>
+            <h2>
+              <i class='icon-wrench'></i>
+              Pivotal Tracker連携の設定方法
+            </h2>
+            <ol>
+              <li>
+                <h4 class='number'>1</h4>
+                <div class='image'>
+                  <img src='images/pivotal_howto_01.png'>
+                </div>
+                <p class='text'>
+                  Pivotal Trackerにアクセスし、
+                  <a href='https://www.pivotaltracker.com/profile' target='_blank'>PROFILEページ</a>
+                  に表示されているAPI Tokenと、ProjectページのURLに表示されているProject IDを確認します。
+                </p>
+              </li>
+              <li>
+                <h4 class='number'>2</h4>
+                <div class='image'>
+                  <img src='images/pivotal_howto_02.png'>
+                </div>
+                <p class='text'>
+                  アシスタントのルーム設定画面を開き、API TokenとProject IDを入力すれば設定完了です。
+                </p>
+              </li>
+              <li>
+                <h4 class='number'>3</h4>
+                <div class='image'>
+                  <img src='images/pivotal_about_02.png'>
+                </div>
+                <p class='text'>
+                  以降は定期的にPivotal TrackerとyouRoom間で情報がやりとりされます。youRoomの議論からチケットを発行したい場合は、「#pivo:(チケットのタイトル)」という書式でコメントを書き込みます。
+                </p>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </div>
+      <!-- Analytics code -->
+      <footer id='footer'>
+        <p id='page-top'>
+          <span class='page-top'>
+            <a href='#header'>
+              <i class='icon-arrow-up'></i>
+              <span>
+                ページ上部へ
+              </span>
+            </a>
+          </span>
+          <span class='to_youroom'>
+            <a href='https://www.youroom.in/'>
+              <i>
+                <img src='images/youroom.png'>
+              </i>
+              <span>
+                youRoomに戻る
+              </span>
+            </a>
+          </span>
+        </p>
+        <nav>
+          <ul>
+            <li></li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>
