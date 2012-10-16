@@ -54,13 +54,14 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
 }
-/* line 38, ../sass/global_nav.sass */
+/* line 39, ../sass/global_nav.sass */
 .sticky #main-nav ul {
   margin: 0 auto;
 }
 
-/* line 41, ../sass/global_nav.sass */
+/* line 42, ../sass/global_nav.sass */
 .top {
   position: fixed;
   right: 15px;
@@ -81,7 +82,7 @@
   border-radius: 10px;
   behavior: url(../PIE.htc);
 }
-/* line 60, ../sass/global_nav.sass */
+/* line 61, ../sass/global_nav.sass */
 .top:before {
   position: absolute;
   top: 11px;
@@ -91,28 +92,28 @@
   border-left: 11px solid transparent;
   border-right: 11px solid transparent;
 }
-/* line 68, ../sass/global_nav.sass */
+/* line 69, ../sass/global_nav.sass */
 .top:hover {
   color: #eeeeee;
 }
-/* line 70, ../sass/global_nav.sass */
+/* line 71, ../sass/global_nav.sass */
 .top:hover:before {
   border-bottom-color: #eeeeee;
 }
 
-/* line 73, ../sass/global_nav.sass */
+/* line 74, ../sass/global_nav.sass */
 .opacity .top {
   opacity: 1;
   -webkit-transition: opacity 700ms linear;
   -moz-transition: opacity 700ms linear;
   transition: opacity 700ms linear;
 }
-/* line 78, ../sass/global_nav.sass */
+/* line 79, ../sass/global_nav.sass */
 .opacity .top.hidden {
   opacity: 0;
 }
 
-/* line 81, ../sass/global_nav.sass */
+/* line 82, ../sass/global_nav.sass */
 .no-opacity .top.hidden {
   display: none;
 }
