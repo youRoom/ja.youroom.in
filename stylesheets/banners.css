@@ -1,0 +1,46 @@
+/* line 5, ../sass/banners.sass */
+#banners {
+  background: url(../images/bg_cream.gif) #f8f8ee;
+  padding: 0 0 14px 0;
+  zoom: 1;
+}
+/* line 3, ../sass/mixins.sass */
+#banners:before, #banners:after {
+  display: block;
+  height: 0;
+  visibility: hidden;
+  content: "\0020";
+}
+/* line 9, ../sass/mixins.sass */
+#banners:after {
+  clear: both;
+}
+/* line 9, ../sass/banners.sass */
+#banners ul {
+  width: 980px;
+  margin: 0 auto;
+}
+/* line 13, ../sass/banners.sass */
+#banners ul li a {
+  display: block;
+  float: left;
+  width: 490px;
+  background: white;
+  height: 80px;
+  zoom: 1;
+}
+/* line 3, ../sass/mixins.sass */
+#banners ul li a:before, #banners ul li a:after {
+  display: block;
+  height: 0;
+  visibility: hidden;
+  content: "\0020";
+}
+/* line 9, ../sass/mixins.sass */
+#banners ul li a:after {
+  clear: both;
+}
+/* line 20, ../sass/banners.sass */
+#banners ul li a img {
+  float: right;
+}

@@ -5,30 +5,35 @@
 #main-nav-holder
   height: 50px
   overflow: hidden
+  clear: both
 
 #main-nav
+  background: #333
   ul
     margin: 0 auto 30px auto
-    height: 50px
-    line-height: 50px
     text-align: center
-    font-size: 14px
-    background: #333
+    font-size: 15px
     color: #ddd
     display: block
-    +box-shadow(rgba(0, 0, 0, .4) 0 3px 6px 0)
     +clearfix
     z-index: 100
     position: relative
+    width: 980px
   li
-    display: inline
-    padding: 0 15px
+    display: block
+    float: left
     border-left: 1px solid #555
     &:first-child
       border-left: 0
     a
       color: #fff
       text-decoration: none
+      height: 50px
+      line-height: 50px
+      padding: 0 12px
+      display: block
+      &:hover
+        background: #555
 
 .sticky #main-nav
   position: fixed

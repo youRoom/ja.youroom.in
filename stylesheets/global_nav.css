@@ -2,24 +2,24 @@
 #main-nav-holder {
   height: 50px;
   overflow: hidden;
+  clear: both;
 }
 
 /* line 10, ../sass/global_nav.sass */
+#main-nav {
+  background: #333333;
+}
+/* line 12, ../sass/global_nav.sass */
 #main-nav ul {
   margin: 0 auto 30px auto;
-  height: 50px;
-  line-height: 50px;
   text-align: center;
-  font-size: 14px;
-  background: #333333;
+  font-size: 15px;
   color: #dddddd;
   display: block;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 3px 6px 0;
-  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 3px 6px 0;
-  box-shadow: rgba(0, 0, 0, 0.4) 0 3px 6px 0;
   zoom: 1;
   z-index: 100;
   position: relative;
+  width: 980px;
 }
 /* line 3, ../sass/mixins.sass */
 #main-nav ul:before, #main-nav ul:after {
@@ -32,23 +32,31 @@
 #main-nav ul:after {
   clear: both;
 }
-/* line 23, ../sass/global_nav.sass */
+/* line 22, ../sass/global_nav.sass */
 #main-nav li {
-  display: inline;
-  padding: 0 15px;
+  display: block;
+  float: left;
   border-left: 1px solid #555555;
 }
-/* line 27, ../sass/global_nav.sass */
+/* line 26, ../sass/global_nav.sass */
 #main-nav li:first-child {
   border-left: 0;
 }
-/* line 29, ../sass/global_nav.sass */
+/* line 28, ../sass/global_nav.sass */
 #main-nav li a {
   color: white;
   text-decoration: none;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 12px;
+  display: block;
+}
+/* line 35, ../sass/global_nav.sass */
+#main-nav li a:hover {
+  background: #555555;
 }
 
-/* line 33, ../sass/global_nav.sass */
+/* line 38, ../sass/global_nav.sass */
 .sticky #main-nav {
   position: fixed;
   top: 0;
@@ -56,12 +64,12 @@
   width: 100%;
   z-index: 100;
 }
-/* line 39, ../sass/global_nav.sass */
+/* line 44, ../sass/global_nav.sass */
 .sticky #main-nav ul {
   margin: 0 auto;
 }
 
-/* line 42, ../sass/global_nav.sass */
+/* line 47, ../sass/global_nav.sass */
 .top {
   position: fixed;
   right: 15px;
@@ -82,7 +90,7 @@
   border-radius: 10px;
   behavior: url(../PIE.htc);
 }
-/* line 61, ../sass/global_nav.sass */
+/* line 66, ../sass/global_nav.sass */
 .top:before {
   position: absolute;
   top: 11px;
@@ -92,28 +100,28 @@
   border-left: 11px solid transparent;
   border-right: 11px solid transparent;
 }
-/* line 69, ../sass/global_nav.sass */
+/* line 74, ../sass/global_nav.sass */
 .top:hover {
   color: #eeeeee;
 }
-/* line 71, ../sass/global_nav.sass */
+/* line 76, ../sass/global_nav.sass */
 .top:hover:before {
   border-bottom-color: #eeeeee;
 }
 
-/* line 74, ../sass/global_nav.sass */
+/* line 79, ../sass/global_nav.sass */
 .opacity .top {
   opacity: 1;
   -webkit-transition: opacity 700ms linear;
   -moz-transition: opacity 700ms linear;
   transition: opacity 700ms linear;
 }
-/* line 79, ../sass/global_nav.sass */
+/* line 84, ../sass/global_nav.sass */
 .opacity .top.hidden {
   opacity: 0;
 }
 
-/* line 82, ../sass/global_nav.sass */
+/* line 87, ../sass/global_nav.sass */
 .no-opacity .top.hidden {
   display: none;
 }
