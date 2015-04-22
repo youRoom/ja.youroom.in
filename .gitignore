@@ -19,3 +19,4 @@ config.yml
 .sass-cache
 database.yml
 compass_app_log.txt
+/_site
